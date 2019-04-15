@@ -2,6 +2,7 @@
   <div class="buy">
     <buy-header :headerList="headerList"></buy-header>
     <buy-listone :Listone="Listone"></buy-listone>
+    <buy-listtwo :Listtwo="Listtwo"></buy-listtwo>
     <common-footer></common-footer>
   </div>
 </template>
@@ -11,9 +12,11 @@ import axios from 'axios'
 import BuyHeader from './components/Header'
 import CommonFooter from '../../common/footer/footer'
 import BuyListone from './components/ListOne'
+import BuyListtwo from './components/ListTwo'
 export default {
   name: 'buy',
   components: {
+    BuyListtwo,
     BuyListone,
     CommonFooter,
     BuyHeader
@@ -21,8 +24,8 @@ export default {
   data () {
     return {
       headerList: [],
-      Listone: []
-      // Listtwo: [],
+      Listone: [],
+      Listtwo: []
       // Listthree: [],
       // Listfour: [],
       // isfalse: false
@@ -69,7 +72,7 @@ export default {
       if (res.ret && res.data) {
         const data = res.data
         this.Listone = data.Listone
-        // this.Listtwo = data.Listtwo
+        this.Listtwo = data.Listtwo
         // this.Listthree = data.Listthree
         // this.Listfour = data.Listfour
       }
