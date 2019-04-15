@@ -1,23 +1,29 @@
 <template>
   <div class="car">
     <car-header :headerList="headerList"></car-header>
+    <car-goods @tocommit="getcommit" :commitinfo="commitinfo"></car-goods>
+    <common-footer></common-footer>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import CarHeader from './components/Header'
+import CarGoods from './components/Goods'
+import CommonFooter from '../../common/footer/footer'
 export default {
   name: 'car',
   components: {
+    CommonFooter,
+    CarGoods,
     CarHeader
   },
   data () {
     return {
-      headerList: []
+      headerList: [],
       // maybeList: [],
       // isshow: false,
-      // commitinfo: 0
+      commitinfo: 0
     }
   },
   methods: {
@@ -32,7 +38,7 @@ export default {
         const data = res.data
         this.headerList = data.headerList
       }
-    }
+    },
     // // 获取内容信息
     // getInfo () {
     //   axios.get('/api/car.json')
@@ -45,9 +51,9 @@ export default {
     //     this.maybeList = data.maybeList
     //   }
     // },
-    // getcommit () {
-    //   this.isshow = !this.isshow
-    // },
+    getcommit () {
+      this.isshow = !this.isshow
+    }
     // cancle () {
     //   this.isshow = !this.isshow
     //   this.commitinfo = 0
