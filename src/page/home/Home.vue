@@ -3,6 +3,7 @@
     <home-header></home-header>
     <home-swiper :swiperList="swiperList"></home-swiper>
     <home-list :listList="listList"></home-list>
+    <home-brand :brandList="brandList"></home-brand>
   </div>
 </template>
 
@@ -11,9 +12,11 @@ import axios from 'axios'
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeList from './components/List'
+import HomeBrand from './components/Brand'
 export default {
   name: 'Home',
   components: {
+    HomeBrand,
     HomeList,
     HomeSwiper,
     HomeHeader
@@ -23,9 +26,9 @@ export default {
       // isfalse: false,
       // lastCity: '',
       swiperList: [],
-      listList: []
+      listList: [],
+      brandList: []
       // hotList: [],
-      // pingpaiList: [],
       // discountList: [],
       // footerList: [],
       // libraryCityList: [],
@@ -43,8 +46,8 @@ export default {
         const data = res.data
         this.swiperList = data.swiperList
         this.listList = data.listList
+        this.brandList = data.brandList
         // this.hotList = data.hotList
-        // this.pingpaiList = data.pingpaiList
         // this.discountList = data.discountList
         // this.footerList = data.footerList
         // this.libraryCityList = data.libraryCityList
