@@ -1,6 +1,14 @@
 <template>
   <div class="home">
     <home-header></home-header>
+    <!--动图-->
+    <div class="img-gif">
+      <img class="img-gif1" src="static/img/bottom-icon/redpct_icon-1541561310.gif"/>
+    </div>
+    <!--回滚顶部-->
+    <div class="img-up" v-show="isfalse" @click="UptoTop()">
+      <img class="up-img" src="static/img/bottom-icon/go-top.png"/>
+    </div>
     <home-swiper :swiperList="swiperList"></home-swiper>
     <home-list :listList="listList"></home-list>
     <home-brand :brandList="brandList"></home-brand>
@@ -38,8 +46,7 @@ export default {
   },
   data () {
     return {
-      // isfalse: false,
-      // lastCity: '',
+      isfalse: false,
       swiperList: [],
       listList: [],
       brandList: [],
@@ -66,18 +73,56 @@ export default {
         this.libraryStoreList = data.libraryStoreList
         this.maybeList = data.maybeList
       }
+    },
+    handleScroll () {
+      let top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
+      console.log(top)
+      if (top > 100) {
+        this.isfalse = true
+      } else {
+        this.isfalse = false
+      }
+    },
+    UptoTop () {
+      var interval = setInterval(function () {
+        if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
+          document.body.scrollTop -= 30
+          document.documentElement.scrollTop -= 30
+        } else {
+          document.body.scrollTop = 0
+          document.documentElement.scrollTop = 0
+          clearInterval(interval)
+        }
+      })
     }
   },
   mounted () {
     this.getHomeInfo()
+    window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  .Home::-webkit-scrollbar {display:none}
-  .Home
+  .home::-webkit-scrollbar {display:none}
+  .home
     background #eff4fa
     margin 0
     padding 0
+    .img-gif
+      position fixed
+      top 50%
+      right 0
+      width 1rem
+      z-index 999
+      .img-gif1
+        width 100%
+    .img-up
+      position fixed
+      bottom 9%
+      right .3rem
+      width 1rem
+      z-index 999
+      .up-img
+        width 100%
 </style>

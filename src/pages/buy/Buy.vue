@@ -1,10 +1,14 @@
 <template>
   <div class="buy">
     <buy-header :headerList="headerList"></buy-header>
+    <div class="uptotop" v-show="isfalse" @click="Totop">
+      <img class="topimg" src="static/img/bottom-icon/go-top.png" />
+    </div>
     <buy-listone :Listone="Listone"></buy-listone>
     <buy-listtwo :Listtwo="Listtwo"></buy-listtwo>
     <buy-listthree :Listthree="Listthree"></buy-listthree>
     <buy-listfour :Listfour="Listfour"></buy-listfour>
+    <buy-bottom></buy-bottom>
     <common-footer></common-footer>
   </div>
 </template>
@@ -17,9 +21,11 @@ import BuyListone from './components/ListOne'
 import BuyListtwo from './components/ListTwo'
 import BuyListthree from './components/Listthree'
 import BuyListfour from './components/Listfour'
+import BuyBottom from './components/bottom'
 export default {
   name: 'buy',
   components: {
+    BuyBottom,
     BuyListfour,
     BuyListthree,
     BuyListtwo,
@@ -33,31 +39,31 @@ export default {
       Listone: [],
       Listtwo: [],
       Listthree: [],
-      Listfour: []
-      // isfalse: false
+      Listfour: [],
+      isfalse: false
     }
   },
   methods: {
-    // Totop () {
-    //   var interval = setInterval(function () {
-    //     if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
-    //       document.body.scrollTop -= 30
-    //       document.documentElement.scrollTop -= 30
-    //     } else {
-    //       document.body.scrollTop = 0
-    //       document.documentElement.scrollTop = 0
-    //       clearInterval(interval)
-    //     }
-    //   })
-    // },
-    // handleScroll () {
-    //   const top = document.documentElement.scrollTop
-    //   if (top > 100) {
-    //     this.isfalse = true
-    //   } else {
-    //     this.isfalse = false
-    //   }
-    // },
+    Totop () {
+      var interval = setInterval(function () {
+        if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
+          document.body.scrollTop -= 30
+          document.documentElement.scrollTop -= 30
+        } else {
+          document.body.scrollTop = 0
+          document.documentElement.scrollTop = 0
+          clearInterval(interval)
+        }
+      })
+    },
+    handleScroll () {
+      const top = document.documentElement.scrollTop
+      if (top > 100) {
+        this.isfalse = true
+      } else {
+        this.isfalse = false
+      }
+    },
     getHeaderInfo () {
       axios.get('/api/publicheader.json')
         .then(this.getHeaderInfoSucc)
@@ -87,18 +93,22 @@ export default {
   mounted () {
     this.getHeaderInfo()
     this.getBuyInfo()
+    window.addEventListener('scroll', this.handleScroll)
   }
-  // activated () {
-  //   window.addEventListener('scroll', this.handleScroll)
-  //   this.getHeaderInfo()
-  //   this.getBuyInfo()
-  // },
-  // deactivated () {
-  //   window.removeEventListener('scroll', this.handleScroll)
-  // }
 }
 </script>
 
 <style lang="stylus" scoped>
-
+  .buy::-webkit-scrollbar {display:none}
+  .buy
+    margin 0
+    padding 0
+    .uptotop
+      position fixed
+      bottom 10%
+      right .15rem
+      width 1rem
+      z-index 999
+      .topimg
+        width 100%
 </style>
