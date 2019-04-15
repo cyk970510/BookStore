@@ -5,6 +5,8 @@
     <home-list :listList="listList"></home-list>
     <home-brand :brandList="brandList"></home-brand>
     <home-seckill :seckillList="seckillList"></home-seckill>
+    <home-vipshop :vipshopList="vipshopList"></home-vipshop>
+    <home-libraryStore :libraryStoreList="libraryStoreList"></home-libraryStore>
   </div>
 </template>
 
@@ -15,9 +17,13 @@ import HomeSwiper from './components/Swiper'
 import HomeList from './components/List'
 import HomeBrand from './components/Brand'
 import HomeSeckill from './components/Seckill'
+import HomeVipshop from './components/Vipshop'
+import HomeLibraryStore from './components/LibraryStore'
 export default {
   name: 'Home',
   components: {
+    HomeLibraryStore,
+    HomeVipshop,
     HomeSeckill,
     HomeBrand,
     HomeList,
@@ -31,10 +37,10 @@ export default {
       swiperList: [],
       listList: [],
       brandList: [],
-      seckillList: []
-      // discountList: [],
+      seckillList: [],
+      vipshopList: [],
+      libraryStoreList: []
       // footerList: [],
-      // libraryCityList: [],
       // maybeList: []
     }
   },
@@ -51,9 +57,9 @@ export default {
         this.listList = data.listList
         this.brandList = data.brandList
         this.seckillList = data.seckillList
-        // this.discountList = data.discountList
+        this.vipshopList = data.vipshopList
         // this.footerList = data.footerList
-        // this.libraryCityList = data.libraryCityList
+        this.libraryStoreList = data.libraryStoreList
         // this.maybeList = data.maybeList
       }
     }
