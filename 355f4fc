@@ -1,0 +1,50 @@
+[33m618ec7f[m[33m ([m[1;36mHEAD -> [m[1;32mclassify-leftNav[m[33m, [m[1;31morigin/router[m[33m, [m[1;31morigin/common-footer[m[33m, [m[1;31morigin/classify-leftNav[m[33m, [m[1;31morigin/classify-header[m[33m, [m[1;32mrouter[m[33m, [m[1;32mcommon-footer[m[33m)[m HEAD@{0}: checkout: moving from master to classify-leftNav
+[33m355f4fc[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mclassify-header[m[33m)[m HEAD@{1}: merge classify-header: Fast-forward
+[33m618ec7f[m[33m ([m[1;36mHEAD -> [m[1;32mclassify-leftNav[m[33m, [m[1;31morigin/router[m[33m, [m[1;31morigin/common-footer[m[33m, [m[1;31morigin/classify-leftNav[m[33m, [m[1;31morigin/classify-header[m[33m, [m[1;32mrouter[m[33m, [m[1;32mcommon-footer[m[33m)[m HEAD@{2}: checkout: moving from classify-header to master
+[33m355f4fc[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m, [m[1;32mclassify-header[m[33m)[m HEAD@{3}: commit: classify-header
+[33m618ec7f[m[33m ([m[1;36mHEAD -> [m[1;32mclassify-leftNav[m[33m, [m[1;31morigin/router[m[33m, [m[1;31morigin/common-footer[m[33m, [m[1;31morigin/classify-leftNav[m[33m, [m[1;31morigin/classify-header[m[33m, [m[1;32mrouter[m[33m, [m[1;32mcommon-footer[m[33m)[m HEAD@{4}: checkout: moving from master to classify-header
+[33m618ec7f[m[33m ([m[1;36mHEAD -> [m[1;32mclassify-leftNav[m[33m, [m[1;31morigin/router[m[33m, [m[1;31morigin/common-footer[m[33m, [m[1;31morigin/classify-leftNav[m[33m, [m[1;31morigin/classify-header[m[33m, [m[1;32mrouter[m[33m, [m[1;32mcommon-footer[m[33m)[m HEAD@{5}: checkout: moving from router to master
+[33m618ec7f[m[33m ([m[1;36mHEAD -> [m[1;32mclassify-leftNav[m[33m, [m[1;31morigin/router[m[33m, [m[1;31morigin/common-footer[m[33m, [m[1;31morigin/classify-leftNav[m[33m, [m[1;31morigin/classify-header[m[33m, [m[1;32mrouter[m[33m, [m[1;32mcommon-footer[m[33m)[m HEAD@{6}: checkout: moving from master to router
+[33m618ec7f[m[33m ([m[1;36mHEAD -> [m[1;32mclassify-leftNav[m[33m, [m[1;31morigin/router[m[33m, [m[1;31morigin/common-footer[m[33m, [m[1;31morigin/classify-leftNav[m[33m, [m[1;31morigin/classify-header[m[33m, [m[1;32mrouter[m[33m, [m[1;32mcommon-footer[m[33m)[m HEAD@{7}: merge common-footer: Fast-forward
+[33m734842d[m[33m ([m[1;31morigin/store[m[33m, [m[1;31morigin/commom-footer[m[33m, [m[1;32mstore[m[33m)[m HEAD@{8}: checkout: moving from common-footer to master
+[33m618ec7f[m[33m ([m[1;36mHEAD -> [m[1;32mclassify-leftNav[m[33m, [m[1;31morigin/router[m[33m, [m[1;31morigin/common-footer[m[33m, [m[1;31morigin/classify-leftNav[m[33m, [m[1;31morigin/classify-header[m[33m, [m[1;32mrouter[m[33m, [m[1;32mcommon-footer[m[33m)[m HEAD@{9}: commit: common-footer
+[33m734842d[m[33m ([m[1;31morigin/store[m[33m, [m[1;31morigin/commom-footer[m[33m, [m[1;32mstore[m[33m)[m HEAD@{10}: checkout: moving from master to common-footer
+[33m734842d[m[33m ([m[1;31morigin/store[m[33m, [m[1;31morigin/commom-footer[m[33m, [m[1;32mstore[m[33m)[m HEAD@{11}: merge store: Fast-forward
+[33me621711[m[33m ([m[1;31morigin/home-maybeLike[m[33m, [m[1;32mhome-maybeLike[m[33m)[m HEAD@{12}: checkout: moving from store to master
+[33m734842d[m[33m ([m[1;31morigin/store[m[33m, [m[1;31morigin/commom-footer[m[33m, [m[1;32mstore[m[33m)[m HEAD@{13}: commit: store
+[33me621711[m[33m ([m[1;31morigin/home-maybeLike[m[33m, [m[1;32mhome-maybeLike[m[33m)[m HEAD@{14}: checkout: moving from master to store
+[33me621711[m[33m ([m[1;31morigin/home-maybeLike[m[33m, [m[1;32mhome-maybeLike[m[33m)[m HEAD@{15}: merge home-maybeLike: Fast-forward
+[33mf2c574b[m[33m ([m[1;31morigin/home-libraryStore[m[33m, [m[1;32mhome-libraryStore[m[33m)[m HEAD@{16}: checkout: moving from home-maybeLike to master
+[33me621711[m[33m ([m[1;31morigin/home-maybeLike[m[33m, [m[1;32mhome-maybeLike[m[33m)[m HEAD@{17}: commit: home-maybeLike
+[33mf2c574b[m[33m ([m[1;31morigin/home-libraryStore[m[33m, [m[1;32mhome-libraryStore[m[33m)[m HEAD@{18}: checkout: moving from master to home-maybeLike
+[33mf2c574b[m[33m ([m[1;31morigin/home-libraryStore[m[33m, [m[1;32mhome-libraryStore[m[33m)[m HEAD@{19}: merge home-libraryStore: Fast-forward
+[33m08d6eb4[m[33m ([m[1;32mhome-seckill[m[33m)[m HEAD@{20}: checkout: moving from home-libraryStore to master
+[33mf2c574b[m[33m ([m[1;31morigin/home-libraryStore[m[33m, [m[1;32mhome-libraryStore[m[33m)[m HEAD@{21}: commit: home-libraryStore
+[33m08d6eb4[m[33m ([m[1;32mhome-seckill[m[33m)[m HEAD@{22}: checkout: moving from master to home-libraryStore
+[33m08d6eb4[m[33m ([m[1;32mhome-seckill[m[33m)[m HEAD@{23}: checkout: moving from master to master
+[33m08d6eb4[m[33m ([m[1;32mhome-seckill[m[33m)[m HEAD@{24}: checkout: moving from home-vipshop to master
+[33m8d6dee6[m[33m ([m[1;31morigin/home-vipshop[m[33m, [m[1;32mhome-vipshop[m[33m)[m HEAD@{25}: commit: home-vipshop
+[33m268527c[m[33m ([m[1;31morigin/home-seckill[m[33m, [m[1;31morigin/home-brand[m[33m, [m[1;32mhome-brand[m[33m)[m HEAD@{26}: checkout: moving from master to home-vipshop
+[33m08d6eb4[m[33m ([m[1;32mhome-seckill[m[33m)[m HEAD@{27}: merge home-seckill: Fast-forward
+[33m268527c[m[33m ([m[1;31morigin/home-seckill[m[33m, [m[1;31morigin/home-brand[m[33m, [m[1;32mhome-brand[m[33m)[m HEAD@{28}: checkout: moving from home-seckill to master
+[33m08d6eb4[m[33m ([m[1;32mhome-seckill[m[33m)[m HEAD@{29}: commit: home-seckill
+[33m268527c[m[33m ([m[1;31morigin/home-seckill[m[33m, [m[1;31morigin/home-brand[m[33m, [m[1;32mhome-brand[m[33m)[m HEAD@{30}: checkout: moving from master to home-seckill
+[33m268527c[m[33m ([m[1;31morigin/home-seckill[m[33m, [m[1;31morigin/home-brand[m[33m, [m[1;32mhome-brand[m[33m)[m HEAD@{31}: merge home-brand: Fast-forward
+[33mf084d1d[m[33m ([m[1;31morigin/home-list[m[33m, [m[1;32mhome-list[m[33m)[m HEAD@{32}: checkout: moving from home-brand to master
+[33m268527c[m[33m ([m[1;31morigin/home-seckill[m[33m, [m[1;31morigin/home-brand[m[33m, [m[1;32mhome-brand[m[33m)[m HEAD@{33}: commit: home-brand
+[33mf084d1d[m[33m ([m[1;31morigin/home-list[m[33m, [m[1;32mhome-list[m[33m)[m HEAD@{34}: checkout: moving from master to home-brand
+[33mf084d1d[m[33m ([m[1;31morigin/home-list[m[33m, [m[1;32mhome-list[m[33m)[m HEAD@{35}: merge home-list: Fast-forward
+[33m275b170[m[33m ([m[1;31morigin/home-swiper[m[33m, [m[1;32mhome-swiper[m[33m)[m HEAD@{36}: checkout: moving from home-list to master
+[33mf084d1d[m[33m ([m[1;31morigin/home-list[m[33m, [m[1;32mhome-list[m[33m)[m HEAD@{37}: commit: home-list
+[33m275b170[m[33m ([m[1;31morigin/home-swiper[m[33m, [m[1;32mhome-swiper[m[33m)[m HEAD@{38}: checkout: moving from master to home-list
+[33m275b170[m[33m ([m[1;31morigin/home-swiper[m[33m, [m[1;32mhome-swiper[m[33m)[m HEAD@{39}: merge home-swiper: Fast-forward
+[33m3633a42[m[33m ([m[1;31morigin/home-header[m[33m, [m[1;32mhome-header[m[33m)[m HEAD@{40}: checkout: moving from home-swiper to master
+[33m275b170[m[33m ([m[1;31morigin/home-swiper[m[33m, [m[1;32mhome-swiper[m[33m)[m HEAD@{41}: commit: home-swiper
+[33m3633a42[m[33m ([m[1;31morigin/home-header[m[33m, [m[1;32mhome-header[m[33m)[m HEAD@{42}: checkout: moving from master to home-swiper
+[33m3633a42[m[33m ([m[1;31morigin/home-header[m[33m, [m[1;32mhome-header[m[33m)[m HEAD@{43}: merge home-header: Fast-forward
+[33mbe4b1f6[m HEAD@{44}: checkout: moving from home-header to master
+[33m3633a42[m[33m ([m[1;31morigin/home-header[m[33m, [m[1;32mhome-header[m[33m)[m HEAD@{45}: commit: home-header finish
+[33mbe4b1f6[m HEAD@{46}: checkout: moving from master to home-header
+[33mbe4b1f6[m HEAD@{47}: commit: init
+[33m70aa7cd[m HEAD@{48}: commit: init
+[33mce28ff5[m HEAD@{49}: clone: from git@github.com:cyk970510/BookStore.git

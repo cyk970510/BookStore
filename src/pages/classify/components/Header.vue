@@ -8,7 +8,7 @@
       </router-link>
       <div class="header-input">
         <span class="iconfont">&#xe632;</span>
-        探索商品/店铺/种类
+        搜索书籍/店铺/种类
       </div>
       <div class="header-right" @click="handleNav" v-show="!isfalse">
         <span class="iconfont arrow-icon">&#xe751;</span>
