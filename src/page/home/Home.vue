@@ -2,6 +2,7 @@
   <div class="home">
     <home-header></home-header>
     <home-swiper :swiperList="swiperList"></home-swiper>
+    <home-list :listList="listList"></home-list>
   </div>
 </template>
 
@@ -9,9 +10,11 @@
 import axios from 'axios'
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
+import HomeList from './components/List'
 export default {
   name: 'Home',
   components: {
+    HomeList,
     HomeSwiper,
     HomeHeader
   },
@@ -19,8 +22,8 @@ export default {
     return {
       // isfalse: false,
       // lastCity: '',
-      swiperList: []
-      // iconList: [],
+      swiperList: [],
+      listList: []
       // hotList: [],
       // pingpaiList: [],
       // discountList: [],
@@ -39,7 +42,7 @@ export default {
       if (res.ret && res.data) {
         const data = res.data
         this.swiperList = data.swiperList
-        // this.iconList = data.iconList
+        this.listList = data.listList
         // this.hotList = data.hotList
         // this.pingpaiList = data.pingpaiList
         // this.discountList = data.discountList
