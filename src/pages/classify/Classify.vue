@@ -1,21 +1,24 @@
 <template>
   <div class="classify">
     <classify-header :headerList="headerList"></classify-header>
+    <classify-lefynav :bodyLeftList="bodyLeftList" @sentid="getid"></classify-lefynav>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import ClassifyHeader from './components/Header'
+import ClassifyLefynav from './components/Leftnav'
 export default {
   name: 'classify',
   components: {
+    ClassifyLefynav,
     ClassifyHeader
   },
   data () {
     return {
-      headerList: []
-      // bodyLeftList: [],
+      headerList: [],
+      bodyLeftList: []
       // footerList1: [],
       // bookList: [],
       // bookList1: [],
@@ -34,19 +37,19 @@ export default {
         const data = res.data
         this.headerList = data.headerList
       }
-    }
-    // getClassifyInfo () {
-    //   axios.get('/api/classify.json')
-    //     .then(this.getClassifyInfoSucc)
-    // },
-    // getClassifyInfoSucc (res) {
-    //   res = res.data
-    //   if (res.ret && res.data) {
-    //     const data = res.data
-    //     this.bodyLeftList = data.bodyLeftList
-    //     this.footerList1 = data.footerList1
-    //   }
-    // },
+    },
+    getClassifyInfo () {
+      axios.get('/api/classify.json')
+        .then(this.getClassifyInfoSucc)
+    },
+    getClassifyInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.bodyLeftList = data.bodyLeftList
+        this.footerList1 = data.footerList1
+      }
+    },
     // getClassifyInfo1 () {
     //   axios.get('/api/book.json')
     //     .then(this.getClassifyInfoSucc1)
@@ -60,12 +63,12 @@ export default {
     //     this.statusList = data.statusList
     //   }
     // }
-    // getid (id) {
-    //   this.navid = id
-    // }
+    getid (id) {
+      this.navid = id
+    }
   },
   mounted () {
-    // this.getClassifyInfo()
+    this.getClassifyInfo()
     // this.getClassifyInfo1()
     this.getHeaderInfo()
   }
