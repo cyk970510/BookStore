@@ -1,6 +1,7 @@
 <template>
   <div class="buy">
     <buy-header :headerList="headerList"></buy-header>
+    <buy-listone :Listone="Listone"></buy-listone>
     <common-footer></common-footer>
   </div>
 </template>
@@ -9,16 +10,18 @@
 import axios from 'axios'
 import BuyHeader from './components/Header'
 import CommonFooter from '../../common/footer/footer'
+import BuyListone from './components/ListOne'
 export default {
   name: 'buy',
   components: {
+    BuyListone,
     CommonFooter,
     BuyHeader
   },
   data () {
     return {
-      headerList: []
-      // Listone: [],
+      headerList: [],
+      Listone: []
       // Listtwo: [],
       // Listthree: [],
       // Listfour: [],
@@ -56,25 +59,25 @@ export default {
         const data = res.data
         this.headerList = data.headerList
       }
+    },
+    getBuyInfo () {
+      axios.get('/api/buy.json')
+        .then(this.getBuyInfoSucc)
+    },
+    getBuyInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.Listone = data.Listone
+        // this.Listtwo = data.Listtwo
+        // this.Listthree = data.Listthree
+        // this.Listfour = data.Listfour
+      }
     }
-    // getBuyInfo () {
-    //   axios.get('/api/buy.json')
-    //     .then(this.getBuyInfoSucc)
-    // },
-    // getBuyInfoSucc (res) {
-    //   res = res.data
-    //   if (res.ret && res.data) {
-    //     const data = res.data
-    //     this.Listone = data.Listone
-    //     this.Listtwo = data.Listtwo
-    //     this.Listthree = data.Listthree
-    //     this.Listfour = data.Listfour
-    //   }
-    // }
   },
   mounted () {
     this.getHeaderInfo()
-    // this.getBuyInfo()
+    this.getBuyInfo()
   }
   // activated () {
   //   window.addEventListener('scroll', this.handleScroll)
