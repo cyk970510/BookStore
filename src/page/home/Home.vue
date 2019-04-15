@@ -8,6 +8,7 @@
     <home-vipshop :vipshopList="vipshopList"></home-vipshop>
     <home-libraryStore :libraryStoreList="libraryStoreList"></home-libraryStore>
     <home-maybe :maybeList="maybeList"></home-maybe>
+    <common-footer></common-footer>
   </div>
 </template>
 
@@ -21,11 +22,11 @@ import HomeSeckill from './components/Seckill'
 import HomeVipshop from './components/Vipshop'
 import HomeLibraryStore from './components/LibraryStore'
 import HomeMaybe from './components/MaybeLike'
-// import CommonFooter from '../../common/footer/footer'
+import CommonFooter from '../../common/footer/footer'
 export default {
   name: 'Home',
   components: {
-    // CommonFooter,
+    CommonFooter,
     HomeMaybe,
     HomeLibraryStore,
     HomeVipshop,
