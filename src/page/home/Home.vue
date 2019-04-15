@@ -4,6 +4,7 @@
     <home-swiper :swiperList="swiperList"></home-swiper>
     <home-list :listList="listList"></home-list>
     <home-brand :brandList="brandList"></home-brand>
+    <home-vipshop :vipshopList="vipshopList"></home-vipshop>
   </div>
 </template>
 
@@ -13,9 +14,11 @@ import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeList from './components/List'
 import HomeBrand from './components/Brand'
+import HomeVipshop from './components/Vipshop'
 export default {
   name: 'Home',
   components: {
+    HomeVipshop,
     HomeBrand,
     HomeList,
     HomeSwiper,
@@ -27,9 +30,8 @@ export default {
       // lastCity: '',
       swiperList: [],
       listList: [],
-      brandList: []
-      // hotList: [],
-      // discountList: [],
+      brandList: [],
+      vipshopList: []
       // footerList: [],
       // libraryCityList: [],
       // maybeList: []
@@ -47,8 +49,7 @@ export default {
         this.swiperList = data.swiperList
         this.listList = data.listList
         this.brandList = data.brandList
-        // this.hotList = data.hotList
-        // this.discountList = data.discountList
+        this.vipshopList = data.vipshopList
         // this.footerList = data.footerList
         // this.libraryCityList = data.libraryCityList
         // this.maybeList = data.maybeList
