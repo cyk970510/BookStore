@@ -3,6 +3,7 @@
     <buy-header :headerList="headerList"></buy-header>
     <buy-listone :Listone="Listone"></buy-listone>
     <buy-listtwo :Listtwo="Listtwo"></buy-listtwo>
+    <buy-listthree :Listthree="Listthree"></buy-listthree>
     <common-footer></common-footer>
   </div>
 </template>
@@ -13,9 +14,11 @@ import BuyHeader from './components/Header'
 import CommonFooter from '../../common/footer/footer'
 import BuyListone from './components/ListOne'
 import BuyListtwo from './components/ListTwo'
+import BuyListthree from './components/Listthree'
 export default {
   name: 'buy',
   components: {
+    BuyListthree,
     BuyListtwo,
     BuyListone,
     CommonFooter,
@@ -25,8 +28,8 @@ export default {
     return {
       headerList: [],
       Listone: [],
-      Listtwo: []
-      // Listthree: [],
+      Listtwo: [],
+      Listthree: []
       // Listfour: [],
       // isfalse: false
     }
@@ -73,7 +76,7 @@ export default {
         const data = res.data
         this.Listone = data.Listone
         this.Listtwo = data.Listtwo
-        // this.Listthree = data.Listthree
+        this.Listthree = data.Listthree
         // this.Listfour = data.Listfour
       }
     }
