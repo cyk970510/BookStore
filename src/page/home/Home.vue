@@ -4,6 +4,7 @@
     <home-swiper :swiperList="swiperList"></home-swiper>
     <home-list :listList="listList"></home-list>
     <home-brand :brandList="brandList"></home-brand>
+    <home-seckill :seckillList="seckillList"></home-seckill>
   </div>
 </template>
 
@@ -13,9 +14,11 @@ import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeList from './components/List'
 import HomeBrand from './components/Brand'
+import HomeSeckill from './components/Seckill'
 export default {
   name: 'Home',
   components: {
+    HomeSeckill,
     HomeBrand,
     HomeList,
     HomeSwiper,
@@ -27,8 +30,8 @@ export default {
       // lastCity: '',
       swiperList: [],
       listList: [],
-      brandList: []
-      // hotList: [],
+      brandList: [],
+      seckillList: []
       // discountList: [],
       // footerList: [],
       // libraryCityList: [],
@@ -47,7 +50,7 @@ export default {
         this.swiperList = data.swiperList
         this.listList = data.listList
         this.brandList = data.brandList
-        // this.hotList = data.hotList
+        this.seckillList = data.seckillList
         // this.discountList = data.discountList
         // this.footerList = data.footerList
         // this.libraryCityList = data.libraryCityList
