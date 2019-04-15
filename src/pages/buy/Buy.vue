@@ -4,6 +4,7 @@
     <buy-listone :Listone="Listone"></buy-listone>
     <buy-listtwo :Listtwo="Listtwo"></buy-listtwo>
     <buy-listthree :Listthree="Listthree"></buy-listthree>
+    <buy-listfour :Listfour="Listfour"></buy-listfour>
     <common-footer></common-footer>
   </div>
 </template>
@@ -15,9 +16,11 @@ import CommonFooter from '../../common/footer/footer'
 import BuyListone from './components/ListOne'
 import BuyListtwo from './components/ListTwo'
 import BuyListthree from './components/Listthree'
+import BuyListfour from './components/Listfour'
 export default {
   name: 'buy',
   components: {
+    BuyListfour,
     BuyListthree,
     BuyListtwo,
     BuyListone,
@@ -29,8 +32,8 @@ export default {
       headerList: [],
       Listone: [],
       Listtwo: [],
-      Listthree: []
-      // Listfour: [],
+      Listthree: [],
+      Listfour: []
       // isfalse: false
     }
   },
@@ -77,7 +80,7 @@ export default {
         this.Listone = data.Listone
         this.Listtwo = data.Listtwo
         this.Listthree = data.Listthree
-        // this.Listfour = data.Listfour
+        this.Listfour = data.Listfour
       }
     }
   },
