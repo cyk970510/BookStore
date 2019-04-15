@@ -7,6 +7,7 @@
     <home-seckill :seckillList="seckillList"></home-seckill>
     <home-vipshop :vipshopList="vipshopList"></home-vipshop>
     <home-libraryStore :libraryStoreList="libraryStoreList"></home-libraryStore>
+    <home-maybe :maybeList="maybeList"></home-maybe>
   </div>
 </template>
 
@@ -19,9 +20,13 @@ import HomeBrand from './components/Brand'
 import HomeSeckill from './components/Seckill'
 import HomeVipshop from './components/Vipshop'
 import HomeLibraryStore from './components/LibraryStore'
+import HomeMaybe from './components/MaybeLike'
+// import CommonFooter from '../../common/footer/footer'
 export default {
   name: 'Home',
   components: {
+    // CommonFooter,
+    HomeMaybe,
     HomeLibraryStore,
     HomeVipshop,
     HomeSeckill,
@@ -39,9 +44,8 @@ export default {
       brandList: [],
       seckillList: [],
       vipshopList: [],
-      libraryStoreList: []
-      // footerList: [],
-      // maybeList: []
+      libraryStoreList: [],
+      maybeList: []
     }
   },
   methods: {
@@ -58,9 +62,8 @@ export default {
         this.brandList = data.brandList
         this.seckillList = data.seckillList
         this.vipshopList = data.vipshopList
-        // this.footerList = data.footerList
         this.libraryStoreList = data.libraryStoreList
-        // this.maybeList = data.maybeList
+        this.maybeList = data.maybeList
       }
     }
   },
