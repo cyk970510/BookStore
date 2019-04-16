@@ -1,15 +1,21 @@
 <template>
   <div class="my">
     <my-header :headerList="headerList"></my-header>
+    <my-body></my-body>
+    <common-footer></common-footer>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import MyHeader from './components/Header'
+import MyBody from './components/body'
+import CommonFooter from '../../common/footer/footer'
 export default {
   name: 'my',
   components: {
+    CommonFooter,
+    MyBody,
     MyHeader
   },
   data () {

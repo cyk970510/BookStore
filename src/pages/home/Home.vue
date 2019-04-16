@@ -76,7 +76,6 @@ export default {
     },
     handleScroll () {
       let top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
-      console.log(top)
       if (top > 100) {
         this.isfalse = true
       } else {
