@@ -2,6 +2,7 @@
   <div class="my">
     <my-header :headerList="headerList"></my-header>
     <my-body></my-body>
+    <my-maybe :maybeList="maybeList"></my-maybe>
     <common-footer></common-footer>
   </div>
 </template>
@@ -11,17 +12,19 @@ import axios from 'axios'
 import MyHeader from './components/Header'
 import MyBody from './components/body'
 import CommonFooter from '../../common/footer/footer'
+import MyMaybe from './components/MaybeLike'
 export default {
   name: 'my',
   components: {
+    MyMaybe,
     CommonFooter,
     MyBody,
     MyHeader
   },
   data () {
     return {
-      headerList: []
-      // maybeList: []
+      headerList: [],
+      maybeList: []
     }
   },
   methods: {
@@ -36,23 +39,23 @@ export default {
         const data = res.data
         this.headerList = data.headerList
       }
+    },
+    // 获取内容信息
+    getInfo () {
+      axios.get('/api/my.json')
+        .then(this.getInfoSucc)
+    },
+    getInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.maybeList = data.maybeList
+      }
     }
-    // // 获取内容信息
-    // getInfo () {
-    //   axios.get('/api/my.json')
-    //     .then(this.getInfoSucc)
-    // },
-    // getInfoSucc (res) {
-    //   res = res.data
-    //   if (res.ret && res.data) {
-    //     const data = res.data
-    //     this.maybeList = data.maybeList
-    //   }
-    // }
   },
   mounted () {
     this.getHeaderInfo()
-    // this.getInfo()
+    this.getInfo()
   }
 }
 </script>
