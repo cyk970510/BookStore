@@ -71,8 +71,12 @@
         </span>
       </section>
       <!--注册条款-->
-      <section class="registerLow" v-if="!registerOrLand">
-        <span class="title">注册即表示您同意《当当交易条款》和《当当社区条款》</span>
+      <section class="registerLow" v-if="!RegisterOrLand">
+        <span class="title">注册即表示您同意
+          <a href="https://mpassport.dangdang.com/trade.php?t=1555381915" target="_blank">《当当交易条款》</a>
+          和
+          <a href="https://mpassport.dangdang.com/community.php?t=1555381915" target="_blank">《当当社区条款》</a>
+        </span>
       </section>
     </section>
     <!--提示模块-->
@@ -472,6 +476,8 @@ export default {
           width 88%
           height .5rem
           font-size .24rem
+        .title >>> a
+          color #f40
     .tips
       width 100%
       overflow hidden

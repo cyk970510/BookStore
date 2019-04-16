@@ -17,11 +17,15 @@
     <!--<transition name="custom-classes-transition"-->
                 <!--enter-active-class="animated fadeIn"-->
                 <!--leave-active-class="animated fadeOut">-->
-      <div class="footer" v-show="isfalse">
-        <a class="footte-1" v-for="item of headerList" :key="item.id" href="##">
-          <img class="img-1" :src="item.imgUrl" />
-        </a>
-      </div>
+    <div class="footer" v-show="isfalse">
+      <router-link class="footte-1"
+                   v-for="item of headerList"
+                   :key="item.id"
+                   :to="item.path"
+      >
+        <img class="img-1" :src="item.imgUrl" @click="changeFooter(item.id)" />
+      </router-link>
+    </div>
     <!--</transition>-->
   </div>
 </template>
@@ -40,6 +44,9 @@ export default {
   methods: {
     handleNav () {
       this.isfalse = !this.isfalse
+    },
+    changeFooter (id) {
+      this.$store.commit('changeid', id)
     }
   }
 }

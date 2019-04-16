@@ -1,6 +1,10 @@
 <template>
   <div class="car">
     <car-header :headerList="headerList"></car-header>
+    <!--回滚顶部-->
+    <div class="img-up" v-show="isfalse" @click="UptoTop()">
+      <img class="up-img" src="static/img/bottom-icon/go-top.png"/>
+    </div>
     <car-goods @tocommit="getcommit" :commitinfo="commitinfo"></car-goods>
     <car-maybe :maybeList="maybeList"></car-maybe>
     <common-footer></common-footer>
@@ -36,7 +40,8 @@ export default {
       headerList: [],
       maybeList: [],
       isshow: false,
-      commitinfo: 0
+      commitinfo: 0,
+      isfalse: false
     }
   },
   methods: {
@@ -74,11 +79,33 @@ export default {
     yescommit () {
       this.isshow = !this.isshow
       this.commitinfo += 1
+    },
+    // 回滚顶部
+    handleScroll () {
+      let top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
+      if (top > 100) {
+        this.isfalse = true
+      } else {
+        this.isfalse = false
+      }
+    },
+    UptoTop () {
+      var interval = setInterval(function () {
+        if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
+          document.body.scrollTop -= 30
+          document.documentElement.scrollTop -= 30
+        } else {
+          document.body.scrollTop = 0
+          document.documentElement.scrollTop = 0
+          clearInterval(interval)
+        }
+      })
     }
   },
   mounted () {
     this.getHeaderInfo()
     this.getInfo()
+    window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -87,7 +114,6 @@ export default {
   .car
     margin 0
     padding 0
-    overflow scroll
     .commitToDelect
       z-index 900
       position absolute
@@ -122,4 +148,12 @@ export default {
           .commit
             padding .26rem 19.5%
             border-radius 0 0 .2rem 0
+    .img-up
+      position fixed
+      bottom 18%
+      right .3rem
+      width 1rem
+      z-index 999
+      .up-img
+        width 100%
 </style>

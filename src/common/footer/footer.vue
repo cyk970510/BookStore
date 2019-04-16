@@ -2,7 +2,7 @@
   <div class="foot border-top">
     <div class="footer" @click="showId('1')">
       <router-link class="footer-1" to="/">
-        <div class="footerbox" :class="{footerboxchange: getid == '1'}">
+        <div class="footerbox" :class="{footerboxchange: getId === '1'}">
           <span class="iconfont footer-icon">&#xe608;</span><br/>
           <span class="footer-title">首页</span>
         </div>
@@ -10,7 +10,7 @@
     </div>
     <div class="footer" @click="showId('2')">
       <router-link class="footer-1" to="/classify">
-        <div class="footerbox" :class="{footerboxchange: getid == '2'}">
+        <div class="footerbox" :class="{footerboxchange: getId === '2'}">
           <span class="iconfont footer-icon">&#xe609;</span><br/>
           <span class="footer-title">分类</span>
         </div>
@@ -18,7 +18,7 @@
     </div>
     <div class="footer" @click="showId('3')">
       <router-link class="footer-1" to="/buy">
-        <div class="footerbox" :class="{footerboxchange: getid == '3'}">
+        <div class="footerbox" :class="{footerboxchange: getId === '3'}">
           <span class="iconfont footer-icon">&#xe635;</span><br/>
           <span class="footer-title">值得买</span>
         </div>
@@ -26,7 +26,7 @@
     </div>
     <div class="footer" @click="showId('4')">
       <router-link class="footer-1" to="/car">
-        <div class="footerbox" :class="{footerboxchange: getid == '4'}">
+        <div class="footerbox" :class="{footerboxchange: getId === '4'}">
           <span class="iconfont footer-icon">&#xe607;</span><br/>
           <span class="footer-title">购物车</span>
         </div>
@@ -34,7 +34,7 @@
     </div>
     <div class="footer" @click="showId('5')">
       <router-link class="footer-1" to="/my">
-        <div class="footerbox" :class="{footerboxchange: getid == '5'}">
+        <div class="footerbox" :class="{footerboxchange: getId === '5'}">
           <span class="iconfont footer-icon">&#xe60f;</span><br/>
           <span class="footer-title">我的当当</span>
         </div>
@@ -57,7 +57,7 @@ export default {
     }
   },
   computed: {
-    getid () {
+    getId () {
       return this.$store.state.footerID
     }
   }

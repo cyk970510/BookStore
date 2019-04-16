@@ -98,6 +98,7 @@ export default {
   mounted () {
     this.getHomeInfo()
     window.addEventListener('scroll', this.handleScroll)
+    this.$store.commit('changeid', '1')
   }
 }
 </script>

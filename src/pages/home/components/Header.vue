@@ -8,7 +8,7 @@
       输入您要找的东西
     </div>
     <router-link to= '/classify'>
-      <div class="header-right">
+      <div class="header-right" @click="trunToClassify">
         <span class="iconfont arrow-icon">&#xe61b;</span>
       </div>
     </router-link>
@@ -17,7 +17,12 @@
 
 <script>
 export default {
-  name: 'homeHeader'
+  name: 'homeHeader',
+  methods: {
+    trunToClassify () {
+      this.$store.commit('changeid', '2')
+    }
+  }
 }
 </script>
 

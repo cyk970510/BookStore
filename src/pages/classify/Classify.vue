@@ -1,6 +1,10 @@
 <template>
   <div class="classify">
     <classify-header :headerList="headerList"></classify-header>
+    <!--回滚顶部-->
+    <div class="img-up" v-show="isfalse" @click="UptoTop()">
+      <img class="up-img" src="static/img/bottom-icon/go-top.png"/>
+    </div>
     <classify-lefynav :bodyLeftList="bodyLeftList" @sentid="getid"></classify-lefynav>
     <classify-body :bookList="bookList" :navid="navid"></classify-body>
     <common-footer></common-footer>
@@ -31,7 +35,8 @@ export default {
       // 中间内容图书数据
       bookList: [],
       // 左边nav的每项id
-      navid: ''
+      navid: '',
+      isfalse: false
     }
   },
   methods: {
@@ -71,16 +76,48 @@ export default {
     },
     getid (id) {
       this.navid = id
+    },
+    // 回滚顶部
+    handleScroll () {
+      let top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
+      if (top > 100) {
+        this.isfalse = true
+      } else {
+        this.isfalse = false
+      }
+    },
+    UptoTop () {
+      var interval = setInterval(function () {
+        if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
+          document.body.scrollTop -= 30
+          document.documentElement.scrollTop -= 30
+        } else {
+          document.body.scrollTop = 0
+          document.documentElement.scrollTop = 0
+          clearInterval(interval)
+        }
+      })
     }
   },
   mounted () {
     this.getClassifyInfo()
     this.getClassifyInfo1()
     this.getHeaderInfo()
+    window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-
+  .classify
+    margin 0
+    padding 0
+    .img-up
+      position fixed
+      bottom 9%
+      right .3rem
+      width 1rem
+      z-index 999
+      .up-img
+        width 100%
 </style>
