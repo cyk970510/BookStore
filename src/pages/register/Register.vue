@@ -1,5 +1,5 @@
 <template>
-  <div class="car">
+  <div class="register">
     <!--HeaderIsLandOrRegister： 传过去是显示 登录 还是 注册-->
     <!--GoBackToLand： 头部处于注册页面时，上面的符号返回登录页面-->
     <register-header :headerList="headerList"
@@ -85,22 +85,70 @@ export default {
       }
     },
     // 判断是否可以正确登录
-    commitLand (id, pasw) {
+    commitLand (LandID, password) {
       var msg = ''
-      for (var i = 0; i < this.registerList.length; i++) {
-        if (id === this.registerList[i].ID) {
-          if (pasw === this.registerList[i].password) {
-            this.isTrue = true
-            this.$store.commit('changeLandId', this.registerList[i].ID)
-            this.$store.commit('changeLandState', true)
-            msg = '登陆成功'
-            break
+      // if (LandID === '' || password === '') {
+      //   msg = '账号密码不能为空'
+      // } else {
+      //   for (var i = 0; i < this.registerList.length; i++) {
+      //     if (LandID !== this.registerList[i].ID) {
+      //       msg = '账号不存在'
+      //     } else {
+      //       if ((/^[0-9]*$/.test(LandID))) {
+      //         if (!(/^1(3|4|5|7|8)\d{9}$/.test(LandID))) {
+      //           msg = '手机号码格式错误'
+      //         } else {
+      //           break
+      //         }
+      //       } else {
+      //         if (!(/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/.test(LandID))) {
+      //           msg = '邮箱格式错误'
+      //         } else {
+      //           break
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+      if (LandID === '' || password === '') {
+        msg = '账号密码不能为空'
+      } else {
+        if ((/^[0-9]*$/.test(LandID))) {
+          if (!(/^1(3|4|5|7|8)\d{9}$/.test(LandID))) {
+            msg = '手机号码格式错误'
           } else {
-            msg = '密码错误'
-            break
+            for (var i = 0; i < this.registerList.length; i++) {
+              if (LandID === this.registerList[i].ID && password === this.registerList[i].password) {
+                this.isTrue = true
+                this.$store.commit('changeLandId', this.registerList[i].ID)
+                this.$store.commit('changeLandState', true)
+                msg = '登陆成功'
+                break
+              } else if (LandID !== this.registerList[i].ID) {
+                msg = '账号不存在'
+              } else if (LandID === this.registerList[i].ID && password !== this.registerList[i].password) {
+                msg = '密码错误'
+              }
+            }
           }
         } else {
-          msg = '不存在该用户'
+          if (!(/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/.test(LandID))) {
+            msg = '邮箱格式错误'
+          } else {
+            for (var j = 0; j < this.registerList.length; j++) {
+              if (LandID === this.registerList[j].ID && password === this.registerList[j].password) {
+                this.isTrue = true
+                this.$store.commit('changeLandId', this.registerList[j].ID)
+                this.$store.commit('changeLandState', true)
+                msg = '登陆成功'
+                break
+              } else if (LandID !== this.registerList[j].ID) {
+                msg = '账号不存在'
+              } else if (LandID === this.registerList[j].ID && password !== this.registerList[j].password) {
+                msg = '密码错误'
+              }
+            }
+          }
         }
       }
       // 动态显示弹窗的内容
@@ -111,15 +159,29 @@ export default {
     // 用于判断是否可以正确注册
     ToRegister (LandID, password, passwordAgain) {
       var msg = ''
-      for (var i = 0; i < this.registerList.length; i++) {
-        if (LandID === '') {
-          msg = '账号不能为空'
-        } else if (LandID === this.registerList[i].ID) {
-          msg = '账号已存在'
-        } else if (password === '' || passwordAgain === '') {
-          msg = '密码不能为空'
-        } else if (password !== passwordAgain) {
-          msg = '两次密码不一样'
+      if (LandID === '' || password === '' || passwordAgain === '') {
+        msg = '账号密码不能为空'
+      } else {
+        for (var i = 0; i < this.registerList.length; i++) {
+          if (LandID === this.registerList[i].ID) {
+            msg = '账号已存在'
+          } else if (password !== passwordAgain) {
+            msg = '两次密码不一样'
+          } else {
+            if ((/^[0-9]*$/.test(LandID))) {
+              if (!(/^1(3|4|5|7|8)\d{9}$/.test(LandID))) {
+                msg = '手机号码格式错误'
+              } else {
+                break
+              }
+            } else {
+              if (!(/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/.test(LandID))) {
+                msg = '邮箱格式错误'
+              } else {
+                break
+              }
+            }
+          }
         }
       }
       // 注册成功时

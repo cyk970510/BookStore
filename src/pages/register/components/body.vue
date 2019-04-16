@@ -8,7 +8,7 @@
           <div class="registerID">
             <span class="iconfont IDicon">&#xe60f;</span>
             <span>
-              <input class="IDinput" type="text" placeholder="手机号/邮箱/昵称" v-model="LandID" v-on:input="watchID" />
+              <input class="IDinput" type="text" placeholder="手机号" v-model="LandID" v-on:input="watchID" />
             </span>
             <span v-if="isResetId" class="iconfont errorone" @click="clearID">&#xe9a2;</span>
           </div>
@@ -29,7 +29,7 @@
           <div class="registerID">
             <span class="iconfont IDicon">&#xe60f;</span>
             <span>
-              <input class="IDinput" type="text" placeholder="手机号/邮箱/昵称" v-model="LandID" v-on:input="watchID" />
+              <input class="IDinput" type="text" placeholder="手机号" v-model="LandID" v-on:input="watchID" />
             </span>
             <span v-if="isResetId" class="iconfont errorone" @click="clearID">&#xe9a2;</span>
           </div>
