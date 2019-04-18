@@ -46,15 +46,6 @@
         </div>
         <div class="xiaoshuo-content">
           <ul class="content-ul">
-            <!--渲染数据-->
-            <!--<div class="ul-content" v-if="isOpenItem[items.id].status" v-for="(itemss,index) of items.children" :key="index">-->
-            <!--<li class="ul-li border-right">-->
-            <!--<a href="##">-->
-            <!--<span class="li-word">{{itemss.name}}</span>-->
-            <!--</a>-->
-            <!--<span class="iconfont ul-hot" v-if="itemss.hot">&#xe6ed;</span>-->
-            <!--</li>-->
-            <!--</div>-->
             <div class="ul-content" v-if="index < isOpenItem[items.id].count" v-for="(itemss,index) of items.children" :key="index">
               <li class="ul-li border-right">
                 <a href="##">

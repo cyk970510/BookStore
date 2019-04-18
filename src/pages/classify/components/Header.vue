@@ -10,26 +10,26 @@
         <span class="iconfont">&#xe632;</span>
         搜索书籍/店铺/种类
       </div>
-      <div class="header-right" @click="handleNav" v-show="!isfalse">
-        <span class="iconfont arrow-icon">&#xe751;</span>
-      </div>
-      <div class="header-right" @click="handleNav" v-show="isfalse">
-        <span class="iconfont error-icon">&#xe606;</span>
-      </div>
+        <div class="header-right" @click="handleNav" v-show="!isfalse">
+          <span class="iconfont arrow-icon">&#xe751;</span>
+        </div>
+        <div class="header-right" @click="handleNav" v-show="isfalse">
+          <span class="iconfont error-icon">&#xe606;</span>
+        </div>
+      <div :class="{headerActive: isfalse}"></div>
     </div>
-    <!--<transition name="custom-classes-transition"-->
-                <!--enter-active-class="animated fadeIn"-->
-                <!--leave-active-class="animated fadeOut">-->
-      <div class="footer" v-show="isfalse">
-        <router-link class="footte-1"
-                     v-for="item of headerList"
-                     :key="item.id"
-                     :to="item.path"
-        >
-          <img class="img-1" :src="item.imgUrl" @click="changeFooter(item.id)" />
-        </router-link>
+    <!--顶部隐藏的导航栏-->
+      <div class="footer" :class="{active: isfalse}">
+        <div class="middle">
+          <router-link class="footte-1"
+                       v-for="item of headerList"
+                       :key="item.id"
+                       :to="item.path"
+          >
+            <img class="img-1" :src="item.imgUrl" @click="changeFooter(item.id)" />
+          </router-link>
+        </div>
       </div>
-    <!--</transition>-->
   </div>
 </template>
 
@@ -63,6 +63,7 @@ export default {
     position relative
     width 100%
     .header-top
+      position relative
       display: flex
       line-height: $headerHeight
       background: #fff
@@ -91,7 +92,7 @@ export default {
         color: #b5bec5
       .header-right
         min-width: 1.04rem
-        padding: 0.1rem
+        margin-top .1rem
         float: right
         text-align: center
         color: #fff
@@ -102,17 +103,37 @@ export default {
           font-size: .54rem
           color #7a8992
         .error-icon
+          display block
+          text-align center
+          margin-left: -.04rem
           color red
           font-size .5rem
+      .headerActive
+        position absolute
+        display block
+        content " "
+        right .35rem
+        bottom -.05rem
+        width .4rem
+        height .2rem
+        background: url(../../../../static/img/bottom-icon/connector.png) no-repeat center 0;
     .footer
       width 100%
       background-color #eee
-      padding .15rem 0
-      .footte-1
-        font-size .3rem
-        .img-1
-          margin-left .3rem
-          padding 0 .2rem
-          width 10%
-          color #4d525d
+      height 0
+      overflow hidden
+      transition height .3s
+      -webkit-transition height .3s
+      .middle
+        padding .13rem 0
+        .footte-1
+          margin-top .1rem
+          font-size .3rem
+          .img-1
+            margin-left .3rem
+            padding 0 .2rem
+            width 10%
+            color #4d525d
+    .active
+      height 1rem
 </style>

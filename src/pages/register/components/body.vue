@@ -221,6 +221,14 @@ export default {
     TurnToRegister () {
       this.$emit('TurnToRegister')
       this.RegisterOrLand = false
+      this.LandID = ''
+      this.password = ''
+      this.passwordAgain = ''
+      this.isResetId = false
+      this.isReaetPasw = false
+      this.isResetPaswAgain = false
+      this.isLook = false
+      this.isLookAgain = false
     }
   },
   watch: {
@@ -237,6 +245,8 @@ export default {
       this.isResetId = false
       this.isReaetPasw = false
       this.isResetPaswAgain = false
+      this.isLook = false
+      this.isLookAgain = false
     }
   }
 }

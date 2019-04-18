@@ -40,21 +40,27 @@ export default {
       Listtwo: [],
       Listthree: [],
       Listfour: [],
-      isfalse: false
+      isfalse: false,
+      timer: null
     }
   },
   methods: {
-    Totop () {
-      var interval = setInterval(function () {
-        if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
-          document.body.scrollTop -= 30
-          document.documentElement.scrollTop -= 30
-        } else {
-          document.body.scrollTop = 0
-          document.documentElement.scrollTop = 0
-          clearInterval(interval)
-        }
-      })
+    UptoTop () {
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      this.timer = setTimeout(() => {
+        var interval = setInterval(function () {
+          if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
+            document.body.scrollTop -= 30
+            document.documentElement.scrollTop -= 30
+          } else {
+            document.body.scrollTop = 0
+            document.documentElement.scrollTop = 0
+            clearInterval(interval)
+          }
+        })
+      }, 16)
     },
     handleScroll () {
       const top = document.documentElement.scrollTop
@@ -93,7 +99,12 @@ export default {
   mounted () {
     this.getHeaderInfo()
     this.getBuyInfo()
+  },
+  activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>

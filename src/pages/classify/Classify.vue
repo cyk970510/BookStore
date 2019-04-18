@@ -36,7 +36,8 @@ export default {
       bookList: [],
       // 左边nav的每项id
       navid: '',
-      isfalse: false
+      isfalse: false,
+      timer: null
     }
   },
   methods: {
@@ -87,23 +88,33 @@ export default {
       }
     },
     UptoTop () {
-      var interval = setInterval(function () {
-        if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
-          document.body.scrollTop -= 30
-          document.documentElement.scrollTop -= 30
-        } else {
-          document.body.scrollTop = 0
-          document.documentElement.scrollTop = 0
-          clearInterval(interval)
-        }
-      })
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      this.timer = setTimeout(() => {
+        var interval = setInterval(function () {
+          if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
+            document.body.scrollTop -= 30
+            document.documentElement.scrollTop -= 30
+          } else {
+            document.body.scrollTop = 0
+            document.documentElement.scrollTop = 0
+            clearInterval(interval)
+          }
+        })
+      }, 16)
     }
   },
   mounted () {
     this.getClassifyInfo()
     this.getClassifyInfo1()
     this.getHeaderInfo()
+  },
+  activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>

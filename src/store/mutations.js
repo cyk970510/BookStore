@@ -1,5 +1,5 @@
 export default {
-  changeid (state, id) {
+  changeId (state, id) {
     state.footerID = id
     try {
       localStorage.footID = id

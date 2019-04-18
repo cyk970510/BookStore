@@ -3,11 +3,11 @@
     <!--登陆注册-->
     <div class="register">
       <router-link to="/register">
-        <div v-if="!this.$store.state.isShow" class="RegisterOrLogin">登陆/注册</div>
+        <div v-if="!this.showRegisterOrLandName" class="RegisterOrLogin">登陆/注册</div>
       </router-link>
-      <div v-if="this.$store.state.isShow" class="LoginSucc">
+      <div v-if="this.showRegisterOrLandName" class="LoginSucc">
         <span>欢迎您:</span>
-        <span>{{this.$store.state.LandID}}</span>
+        <span>{{this.LandID}}</span>
       </div>
     </div>
     <!--登陆注册下面的信息-->
@@ -133,8 +133,15 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
-  name: 'MyBody'
+  name: 'MyBody',
+  computed: {
+    ...mapState({
+      showRegisterOrLandName: 'isShow',
+      LandID: 'LandID'
+    })
+  }
 }
 </script>
 

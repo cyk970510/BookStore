@@ -20,6 +20,7 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination', //  定义播图下面的白点
+        // paginationType: 'progress',
         loop: true,
         autoplay: 4000
       }
@@ -29,9 +30,18 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  .warpper >>> .swiper-pagination-bullet
+    width .1rem
+    height .5rem
+    display inline-block
+    border-radius .1rem
+    background #000
+    margin-left .15rem
+    -webkit-transform rotate(30deg)
   .warpper >>> .swiper-pagination-bullet-active
     background: #fff
   .warpper
+    position relative
     overflow: hidden
     width: 100%
     height: 0
@@ -39,8 +49,7 @@ export default {
     background: #fff
     .swiper-img
       width: 100%
-    .swiper-pagination,
-    .swiper-pagination-bullets
+    .swiper-pagination
       position absolute
-      bottom 0
+      margin-left 2rem
 </style>

@@ -22,6 +22,7 @@
 
 <script>
 import axios from 'axios'
+import {mapMutations} from 'vuex'
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeList from './components/List'
@@ -53,7 +54,8 @@ export default {
       seckillList: [],
       vipshopList: [],
       libraryStoreList: [],
-      maybeList: []
+      maybeList: [],
+      timer: null
     }
   },
   methods: {
@@ -83,22 +85,36 @@ export default {
       }
     },
     UptoTop () {
-      var interval = setInterval(function () {
-        if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
-          document.body.scrollTop -= 30
-          document.documentElement.scrollTop -= 30
-        } else {
-          document.body.scrollTop = 0
-          document.documentElement.scrollTop = 0
-          clearInterval(interval)
-        }
-      })
-    }
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      this.timer = setTimeout(() => {
+        var interval = setInterval(function () {
+          if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
+            document.body.scrollTop -= 30
+            document.documentElement.scrollTop -= 30
+          } else {
+            document.body.scrollTop = 0
+            document.documentElement.scrollTop = 0
+            clearInterval(interval)
+          }
+        })
+      }, 16)
+    },
+    changeID () {
+      this.changeId('1')
+    },
+    ...mapMutations(['changeId'])
   },
   mounted () {
     this.getHomeInfo()
+    this.changeID()
+  },
+  activated () {
     window.addEventListener('scroll', this.handleScroll)
-    this.$store.commit('changeid', '1')
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -106,6 +122,7 @@ export default {
 <style lang="stylus" scoped>
   .home::-webkit-scrollbar {display:none}
   .home
+    position relative
     background #eff4fa
     margin 0
     padding 0

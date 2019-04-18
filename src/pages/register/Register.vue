@@ -36,6 +36,7 @@ import axios from 'axios'
 import RegisterHeader from './components/Header'
 import RegisterBody from './components/body'
 import RegisterTan from './components/Tan'
+import {mapMutations} from 'vuex'
 export default {
   name: 'register',
   components: {RegisterTan, RegisterBody, RegisterHeader},
@@ -87,29 +88,6 @@ export default {
     // 判断是否可以正确登录
     commitLand (LandID, password) {
       var msg = ''
-      // if (LandID === '' || password === '') {
-      //   msg = '账号密码不能为空'
-      // } else {
-      //   for (var i = 0; i < this.registerList.length; i++) {
-      //     if (LandID !== this.registerList[i].ID) {
-      //       msg = '账号不存在'
-      //     } else {
-      //       if ((/^[0-9]*$/.test(LandID))) {
-      //         if (!(/^1(3|4|5|7|8)\d{9}$/.test(LandID))) {
-      //           msg = '手机号码格式错误'
-      //         } else {
-      //           break
-      //         }
-      //       } else {
-      //         if (!(/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/.test(LandID))) {
-      //           msg = '邮箱格式错误'
-      //         } else {
-      //           break
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
       if (LandID === '' || password === '') {
         msg = '账号密码不能为空'
       } else {
@@ -138,8 +116,8 @@ export default {
             for (var j = 0; j < this.registerList.length; j++) {
               if (LandID === this.registerList[j].ID && password === this.registerList[j].password) {
                 this.isTrue = true
-                this.$store.commit('changeLandId', this.registerList[j].ID)
-                this.$store.commit('changeLandState', true)
+                this.changeLandId(this.registerList[j].ID)
+                this.changeLandState(true)
                 msg = '登陆成功'
                 break
               } else if (LandID !== this.registerList[j].ID) {
@@ -156,6 +134,10 @@ export default {
       // 弹窗显示
       this.isTan = true
     },
+    ...mapMutations({
+      changeLandId: 'changeLandId',
+      changeLandState: 'changeLandState'
+    }),
     // 用于判断是否可以正确注册
     ToRegister (LandID, password, passwordAgain) {
       var msg = ''

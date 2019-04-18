@@ -2,7 +2,7 @@
   <div class="foot border-top">
     <div class="footer" @click="showId('1')">
       <router-link class="footer-1" to="/">
-        <div class="footerbox" :class="{footerboxchange: getId === '1'}">
+        <div class="footerbox" :class="{footerboxchange: this.footerID === '1'}">
           <span class="iconfont footer-icon">&#xe608;</span><br/>
           <span class="footer-title">首页</span>
         </div>
@@ -10,7 +10,7 @@
     </div>
     <div class="footer" @click="showId('2')">
       <router-link class="footer-1" to="/classify">
-        <div class="footerbox" :class="{footerboxchange: getId === '2'}">
+        <div class="footerbox" :class="{footerboxchange: this.footerID === '2'}">
           <span class="iconfont footer-icon">&#xe609;</span><br/>
           <span class="footer-title">分类</span>
         </div>
@@ -18,7 +18,7 @@
     </div>
     <div class="footer" @click="showId('3')">
       <router-link class="footer-1" to="/buy">
-        <div class="footerbox" :class="{footerboxchange: getId === '3'}">
+        <div class="footerbox" :class="{footerboxchange: this.footerID === '3'}">
           <span class="iconfont footer-icon">&#xe635;</span><br/>
           <span class="footer-title">值得买</span>
         </div>
@@ -26,7 +26,7 @@
     </div>
     <div class="footer" @click="showId('4')">
       <router-link class="footer-1" to="/car">
-        <div class="footerbox" :class="{footerboxchange: getId === '4'}">
+        <div class="footerbox" :class="{footerboxchange: this.footerID === '4'}">
           <span class="iconfont footer-icon">&#xe607;</span><br/>
           <span class="footer-title">购物车</span>
         </div>
@@ -34,7 +34,7 @@
     </div>
     <div class="footer" @click="showId('5')">
       <router-link class="footer-1" to="/my">
-        <div class="footerbox" :class="{footerboxchange: getId === '5'}">
+        <div class="footerbox" :class="{footerboxchange: this.footerID === '5'}">
           <span class="iconfont footer-icon">&#xe60f;</span><br/>
           <span class="footer-title">我的当当</span>
         </div>
@@ -44,6 +44,7 @@
   </div>
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'CommonFooter',
   data () {
@@ -53,13 +54,15 @@ export default {
   },
   methods: {
     showId (id) {
-      this.$store.commit('changeid', id)
-    }
+      this.changeId(id)
+    },
+    ...mapMutations(['changeId'])
   },
   computed: {
-    getId () {
-      return this.$store.state.footerID
-    }
+    // 映射 store中的公共属性 footerID
+    // 然后可以直接 写 this.footerID
+    // 而不用写 this.store.state.footerID
+    ...mapState(['footerID'])
   }
 }
 </script>

@@ -6,7 +6,7 @@
           @click="Classifytype(item.id)"
           :ref="item.name"
       >
-        <a class="" href="##" :name="item.name" @click="toscroll">{{item.name}}</a>
+        <a class="" :name="item.name" @click="toscroll">{{item.name}}</a>
       </li>
     </ul>
   </div>
