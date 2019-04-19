@@ -7,6 +7,8 @@ let LandID = ''
 // 显示登录/注册  还是显示 登录成功的信息
 let isShow = false
 
+let showLand = true
+
 try {
   if (localStorage.footID) {
     defaultfooterID = localStorage.footID
@@ -17,5 +19,6 @@ try {
 export default {
   footerID: defaultfooterID,
   LandID: LandID,
-  isShow: isShow
+  isShow: isShow,
+  showLand
 }

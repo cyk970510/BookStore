@@ -1,7 +1,7 @@
 <template>
   <div class="buy">
     <buy-header :headerList="headerList"></buy-header>
-    <div class="uptotop" v-show="isfalse" @click="Totop">
+    <div class="uptotop" v-show="isfalse" @click="UptoTop">
       <img class="topimg" src="static/img/bottom-icon/go-top.png" />
     </div>
     <buy-listone :Listone="Listone"></buy-listone>
@@ -51,9 +51,9 @@ export default {
       }
       this.timer = setTimeout(() => {
         var interval = setInterval(function () {
-          if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
-            document.body.scrollTop -= 30
-            document.documentElement.scrollTop -= 30
+          if (document.body.scrollTop >= 150 || document.documentElement.scrollTop >= 150) {
+            document.body.scrollTop -= 150
+            document.documentElement.scrollTop -= 150
           } else {
             document.body.scrollTop = 0
             document.documentElement.scrollTop = 0
@@ -63,7 +63,7 @@ export default {
       }, 16)
     },
     handleScroll () {
-      const top = document.documentElement.scrollTop
+      let top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
       if (top > 100) {
         this.isfalse = true
       } else {
@@ -119,7 +119,7 @@ export default {
       bottom 10%
       right .15rem
       width 1rem
-      z-index 999
+      z-index 800
       .topimg
         width 100%
 </style>

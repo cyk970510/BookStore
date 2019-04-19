@@ -1,19 +1,12 @@
 <template>
   <div class="register">
-    <!--HeaderIsLandOrRegister： 传过去是显示 登录 还是 注册-->
-    <!--GoBackToLand： 头部处于注册页面时，上面的符号返回登录页面-->
     <register-header :headerList="headerList"
-                     :HeaderIsLandOrRegister="HeaderIsLandOrRegister"
-                     @GoBackToLand="GoBackToLand"
     ></register-header>
     <!--TocommitLand： 触发commitLand函数，接收账号密码的数据，来判断是否可以正常登录-->
     <!--ToRegister： 触发ToRegister函数，接收账号密码和再次输入密码的数据，来判断是否可以正常注册-->
     <!--TurnToRegister： 触发TurnToRegister，转向注册页面-->
-    <!--registerOrLand： 传过去registerOrLand，用于控制显示登录或注册页面-->
     <register-body @TocommitLand="commitLand"
                    @ToRegister="ToRegister"
-                   @TurnToRegister="TurnToRegister"
-                   :registerOrLand="registerOrLand"
     ></register-body>
     <!--弹窗-->
     <!--isTrue： 用于控制是否登录成功然后跳转my的页面-->
@@ -53,11 +46,7 @@ export default {
       // 用于动态显示弹窗的内容
       message: '',
       // 用于控制显示登录或注册页面
-      registerOrLand: true,
-      // 用于控制注册时 下面的按钮是 确定 还是 前往登陆
-      isTrueRegister: false,
-      // 传过去时，头部显示 登录 还是 注册
-      HeaderIsLandOrRegister: true
+      isTrueRegister: false
     }
   },
   methods: {
@@ -134,10 +123,6 @@ export default {
       // 弹窗显示
       this.isTan = true
     },
-    ...mapMutations({
-      changeLandId: 'changeLandId',
-      changeLandState: 'changeLandState'
-    }),
     // 用于判断是否可以正确注册
     ToRegister (LandID, password, passwordAgain) {
       var msg = ''
@@ -187,25 +172,16 @@ export default {
     GotoLand () {
       // 隐藏弹窗
       this.isTan = !this.isTan
-      // 隐藏注册页面
-      this.registerOrLand = !this.registerOrLand
       // 按钮显示 确定
       this.isTrueRegister = false
-      // 头部显示登录
-      this.HeaderIsLandOrRegister = !this.HeaderIsLandOrRegister
-    },
-    // 前往注册页面
-    TurnToRegister () {
-      // 头部显示注册
-      this.HeaderIsLandOrRegister = !this.HeaderIsLandOrRegister
-    },
-    // 头部返回按钮，返回登录页面
-    GoBackToLand () {
-      // 头部显示登录
-      this.HeaderIsLandOrRegister = !this.HeaderIsLandOrRegister
       // 显示登录页面
-      this.registerOrLand = !this.registerOrLand
-    }
+      this.ShowLand()
+    },
+    ...mapMutations({
+      changeLandId: 'changeLandId',
+      changeLandState: 'changeLandState',
+      ShowLand: 'ShowLand'
+    })
   },
   mounted () {
     this.getHeaderInfo()
@@ -219,7 +195,6 @@ export default {
     width 100%
     margin 0
     padding 0
-    background #fff
     .Tan
       position fixed
       width 100%

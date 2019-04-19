@@ -2,67 +2,75 @@
   <div class="header border-bottom">
     <div class="header-top">
       <!--登录时上面的返回符号，返回my页面-->
-      <router-link to="/my" v-if="headerIsLandOrRegister">
+      <router-link to="/my" v-if="this.showLand">
         <div class="header-left">
           <div class="iconfont back-icon">&#xe624;</div>
         </div>
       </router-link>
       <!--注册时上面的返回符号，返回登录-->
-      <div class="header-left" v-if="!headerIsLandOrRegister" @click="GoBackLand">
+      <div class="header-left" v-if="!this.showLand" @click="GoBackLand">
         <div class="iconfont back-icon">&#xe624;</div>
       </div>
       <!--头部显示信息 是登录还是注册-->
-      <div class="header-input" v-if="headerIsLandOrRegister">登陆</div>
-      <div class="header-input" v-if="!headerIsLandOrRegister">注册</div>
-      <div class="header-right" @click="handleNav" v-show="!isfalse">
+      <div class="header-input" v-if="this.showLand">登陆</div>
+      <div class="header-input" v-if="!this.showLand">注册</div>
+      <div class="header-right" @click="handleNav" v-if="!isFalse">
         <span class="iconfont arrow-icon">&#xe751;</span>
       </div>
-      <div class="header-right" @click="handleNav" v-show="isfalse">
+      <div class="header-right" @click="handleNav" v-if="isFalse">
         <span class="iconfont error-icon">&#xe606;</span>
       </div>
+      <div :class="{headerActive: isFalse}"></div>
     </div>
-    <!--<transition name="custom-classes-transition"-->
-                <!--enter-active-class="animated fadeIn"-->
-                <!--leave-active-class="animated fadeOut">-->
-      <div class="footer" v-show="isfalse">
-        <a class="footte-1" v-for="item of headerList" :key="item.id" href="##">
-          <img class="img-1" :src="item.imgUrl" />
-        </a>
+    <!--顶部隐藏的导航栏-->
+    <div class="footer" :class="{active: isFalse}">
+      <div class="middle">
+        <router-link class="footte-1"
+                     v-for="item of headerList"
+                     :key="item.id"
+                     :to="item.path"
+        >
+          <img class="img-1" :src="item.imgUrl" @click="changeFooter(item.id)" />
+        </router-link>
       </div>
-    <!--</transition>-->
+    </div>
   </div>
 </template>
 
 <script>
+import {mapState, mapMutations} from 'vuex'
 export default {
   name: 'RegisterHeader',
   props: {
-    headerList: Array,
-    // 是显示注册还是登录
-    HeaderIsLandOrRegister: Boolean
+    headerList: Array
   },
   data () {
     return {
       // 控制头部下拉栏
-      isfalse: false,
-      // 是显示注册还是登录
-      headerIsLandOrRegister: true
+      isFalse: false
     }
   },
   methods: {
     handleNav () {
-      this.isfalse = !this.isfalse
+      this.isFalse = !this.isFalse
     },
     // 返回登录页面，触发GoBackToLand
     GoBackLand () {
-      this.$emit('GoBackToLand')
-    }
+      this.ShowLand()
+    },
+    changeFooter (id) {
+      this.changeId(id)
+      this.isFalse = false
+    },
+    ...mapMutations({
+      changeId: 'changeId',
+      ShowLand: 'ShowLand'
+    })
   },
-  watch: {
-    // 监听HeaderIsLandOrRegister，将headerIsLandOrRegister 置反
-    HeaderIsLandOrRegister () {
-      this.headerIsLandOrRegister = !this.headerIsLandOrRegister
-    }
+  computed: {
+    ...mapState({
+      showLand: 'showLand'
+    })
   }
 }
 </script>
@@ -75,6 +83,7 @@ export default {
     position relative
     width 100%
     .header-top
+      position relative
       display: flex
       line-height: $headerHeight
       background: #fff
@@ -115,15 +124,32 @@ export default {
         .error-icon
           color red
           font-size .5rem
+      .headerActive
+        position absolute
+        display block
+        content " "
+        right .45rem
+        bottom -.05rem
+        width .4rem
+        height .2rem
+        background: url(../../../../static/img/bottom-icon/connector.png) no-repeat center 0;
     .footer
       width 100%
       background-color #eee
-      padding .15rem 0
-      .footte-1
-        font-size .3rem
-        .img-1
-          margin-left .3rem
-          padding 0 .2rem
-          width 10%
-          color #4d525d
+      height 0
+      overflow hidden
+      transition height .3s
+      -webkit-transition height .3s
+      .middle
+        padding .13rem 0
+        .footte-1
+          margin-top .1rem
+          font-size .3rem
+          .img-1
+            margin-left .3rem
+            padding 0 .2rem
+            width 10%
+            color #4d525d
+    .active
+      height 1rem
 </style>

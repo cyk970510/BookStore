@@ -3,7 +3,7 @@
     <!--登陆模块-->
     <section class="land">
       <!--登陆-->
-      <section class="landform" v-if="RegisterOrLand">
+      <section class="landform" v-if="this.showLand">
         <form>
           <div class="registerID">
             <span class="iconfont IDicon">&#xe60f;</span>
@@ -24,7 +24,7 @@
         </form>
       </section>
       <!--注册-->
-      <section class="registerform" v-if="!RegisterOrLand">
+      <section class="registerform" v-if="!this.showLand">
         <form>
           <div class="registerID">
             <span class="iconfont IDicon">&#xe60f;</span>
@@ -54,14 +54,14 @@
         </form>
       </section>
       <!--登陆按钮-->
-      <section class="landBtn" @click="ToLand" v-if="RegisterOrLand">
+      <section class="landBtn" @click="ToLand" v-if="this.showLand">
         <button class="Btn" type="button">登陆</button>
       </section>
-      <section class="registerBtn" @click="ToRegister" v-if="!RegisterOrLand">
+      <section class="registerBtn" @click="ToRegister" v-if="!this.showLand">
         <button class="Btn" type="button">注册</button>
       </section>
       <!--找回密码模块-->
-      <section class="findPassword" v-if="RegisterOrLand">
+      <section class="findPassword" v-if="this.showLand">
         <span class="findpassword">
           <span class="find">找回密码</span>
           <span class="register" @click="TurnToRegister">
@@ -71,7 +71,7 @@
         </span>
       </section>
       <!--注册条款-->
-      <section class="registerLow" v-if="!RegisterOrLand">
+      <section class="registerLow" v-if="!this.showLand">
         <span class="title">注册即表示您同意
           <a href="https://mpassport.dangdang.com/trade.php?t=1555381915" target="_blank">《当当交易条款》</a>
           和
@@ -80,14 +80,14 @@
       </section>
     </section>
     <!--提示模块-->
-    <section class="tips" v-if="RegisterOrLand">
+    <section class="tips" v-if="this.showLand">
       <span class="tip">
         <span>为保障账户安全，请您不要设置与邮箱密码相同的账户登录密码或支付密码，</span>
         <span class="careful"><a href="##">谨防诈骗!</a></span>
       </span>
     </section>
     <!--第三方登陆-->
-    <section class="third" v-if="RegisterOrLand">
+    <section class="third" v-if="this.showLand">
       <span class="title">第三方账号登陆</span>
       <section class="content">
         <section class="one">
@@ -125,12 +125,9 @@
 </template>
 
 <script>
+import {mapState, mapMutations} from 'vuex'
 export default {
   name: 'RegisterBody',
-  props: {
-    // 父层传来，改变显示 登录 还是 注册
-    registerOrLand: Boolean
-  },
   data () {
     return {
       // 控制 密码 的显示方式
@@ -148,9 +145,7 @@ export default {
       // 双向数据绑定--密码
       password: '',
       // 双向数据绑定--再次输入密码
-      passwordAgain: '',
-      // 是显示登录页面，还是注册页面
-      RegisterOrLand: true
+      passwordAgain: ''
     }
   },
   methods: {
@@ -220,7 +215,25 @@ export default {
     // 跳转到注册页面，触发TurnToRegister
     TurnToRegister () {
       this.$emit('TurnToRegister')
-      this.RegisterOrLand = false
+      this.hideLand()
+      this.LandID = ''
+      this.password = ''
+      this.passwordAgain = ''
+      this.isResetId = false
+      this.isReaetPasw = false
+      this.isResetPaswAgain = false
+      this.isLook = false
+      this.isLookAgain = false
+    },
+    ...mapMutations(['hideLand'])
+  },
+  watch: {
+    // 注册完
+    // 监听父层传来的registerOrLand
+    // 来改变自己的变量RegisterOrLand
+    // 从而改变显示 登录 或者 注册
+    // 并且讲输入框置空，后面的显示×也隐藏
+    showLand () {
       this.LandID = ''
       this.password = ''
       this.passwordAgain = ''
@@ -231,23 +244,11 @@ export default {
       this.isLookAgain = false
     }
   },
-  watch: {
-    // 注册完
-    // 监听父层传来的registerOrLand
-    // 来改变自己的变量RegisterOrLand
-    // 从而改变显示 登录 或者 注册
-    // 并且讲输入框置空，后面的显示×也隐藏
-    registerOrLand () {
-      this.RegisterOrLand = true
-      this.LandID = ''
-      this.password = ''
-      this.passwordAgain = ''
-      this.isResetId = false
-      this.isReaetPasw = false
-      this.isResetPaswAgain = false
-      this.isLook = false
-      this.isLookAgain = false
-    }
+  computed: {
+    ...mapState({
+      showLand: 'showLand',
+      showRegister: 'showRegister'
+    })
   }
 }
 </script>
@@ -546,6 +547,7 @@ export default {
       width 100%
       overflow hidden
       margin-top 1rem
+      padding-bottom 1.75rem
       ul
         width 80%
         margin 0 auto

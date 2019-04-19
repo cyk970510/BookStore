@@ -11,5 +11,11 @@ export default {
   },
   changeLandState (state, is) {
     state.isShow = is
+  },
+  ShowLand (state) {
+    state.showLand = true
+  },
+  hideLand (state) {
+    state.showLand = false
   }
 }

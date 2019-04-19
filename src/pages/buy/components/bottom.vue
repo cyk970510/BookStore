@@ -1,8 +1,8 @@
 <template>
   <div class="bottom">
     <div class="bottomregister">
-      <a><span class="land">登陆</span></a>
-      <a><span class="register">注册</span></a>
+      <a><span class="land" @click="GoToLand">登陆</span></a>
+      <a><span class="register" @click="GotoRegister">注册</span></a>
       <a>
         <span class="Top" @click="totop">
           <span class="iconfont topicon">&#xe644;</span>
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 export default {
   name: 'BuyBottom',
   methods: {
@@ -41,7 +42,20 @@ export default {
           clearInterval(interval)
         }
       })
-    }
+    },
+    GoToLand () {
+      this.$router.push('/register')
+      this.changeId('5')
+    },
+    GotoRegister () {
+      this.$router.push('/register')
+      this.hideLand()
+      this.changeId('5')
+    },
+    ...mapMutations({
+      changeId: 'changeId',
+      hideLand: 'hideLand'
+    })
   }
 }
 </script>

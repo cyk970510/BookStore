@@ -69,6 +69,7 @@ export default {
 
 <style lang="stylus" scoped>
   .foot
+    z-index 700
     position fixed
     bottom 0
     left 0

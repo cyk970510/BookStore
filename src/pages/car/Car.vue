@@ -96,9 +96,9 @@ export default {
       }
       this.timer = setTimeout(() => {
         var interval = setInterval(function () {
-          if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
-            document.body.scrollTop -= 30
-            document.documentElement.scrollTop -= 30
+          if (document.body.scrollTop >= 150 || document.documentElement.scrollTop >= 150) {
+            document.body.scrollTop -= 150
+            document.documentElement.scrollTop -= 150
           } else {
             document.body.scrollTop = 0
             document.documentElement.scrollTop = 0
@@ -127,7 +127,7 @@ export default {
     padding 0
     .commitToDelect
       z-index 900
-      position absolute
+      position fixed
       top 0
       left 0
       width 100%
@@ -164,7 +164,7 @@ export default {
       bottom 18%
       right .3rem
       width 1rem
-      z-index 999
+      z-index 800
       .up-img
         width 100%
 </style>

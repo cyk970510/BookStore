@@ -55,10 +55,13 @@ export default {
 
 <style lang="stylus" scoped>
   .Tan
+    z-index 900
     position fixed
+    top 0
+    left 0
     width 100%
     height 100%
-    background RGB(0,0,0,0.5)
+    background rgba(0,0,0,0.5)
     .wrapper
       position absolute
       width 80%
@@ -67,6 +70,7 @@ export default {
       margin-left 10%
       background white
       border-radius .1rem
+      border none
       .title
         position relative
         width 100%
@@ -87,11 +91,12 @@ export default {
       .foot
         position relative
         width 100%
-        height 30%
+        height 31%
         border-radius 0 0 .1rem .1rem
         background #ff463c
         text-align center
         font-size .35rem
+        border #ff463c
         .commit
           position absolute
           display block

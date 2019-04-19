@@ -36,6 +36,7 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 export default {
   name: 'BuyHeader',
   props: {
@@ -51,8 +52,10 @@ export default {
       this.isfalse = !this.isfalse
     },
     changeFooter (id) {
-      this.$store.commit('changeid', id)
-    }
+      this.changeId(id)
+      this.isfalse = false
+    },
+    ...mapMutations(['changeId'])
   }
 }
 </script>

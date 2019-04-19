@@ -2,7 +2,7 @@
   <div class="my">
     <my-header :headerList="headerList"></my-header>
     <!--回滚顶部-->
-    <div class="img-up" v-show="isfalse" @click="UptoTop()">
+    <div class="img-up" v-show="isfalse" @click="UptoTop">
       <img class="up-img" src="static/img/bottom-icon/go-top.png"/>
     </div>
     <my-body></my-body>
@@ -73,9 +73,9 @@ export default {
       }
       this.timer = setTimeout(() => {
         var interval = setInterval(function () {
-          if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
-            document.body.scrollTop -= 30
-            document.documentElement.scrollTop -= 30
+          if (document.body.scrollTop >= 150 || document.documentElement.scrollTop >= 150) {
+            document.body.scrollTop -= 150
+            document.documentElement.scrollTop -= 150
           } else {
             document.body.scrollTop = 0
             document.documentElement.scrollTop = 0
@@ -109,7 +109,7 @@ export default {
       bottom 9%
       right .3rem
       width 1rem
-      z-index 999
+      z-index 800
       .up-img
         width 100%
 </style>

@@ -16,12 +16,14 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 export default {
   name: 'homeHeader',
   methods: {
     trunToClassify () {
-      this.$store.commit('changeid', '2')
-    }
+      this.changeId('2')
+    },
+    ...mapMutations(['changeId'])
   }
 }
 </script>
