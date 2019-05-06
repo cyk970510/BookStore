@@ -1,6 +1,11 @@
 # bookstore
 
 > a App about BookStore(Vue)
+  import Vuex --> Store(state,mutations)
+        --> mapState, mapMutations
+  import axios,
+  immport better-scroll
+  
 
 ## Build Setup
 
