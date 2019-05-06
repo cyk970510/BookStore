@@ -149,6 +149,7 @@ export default {
   .body
     position relative
     width 100%
+    margin-top -0.5vh
     .register
       width 100%
       height 14vh
