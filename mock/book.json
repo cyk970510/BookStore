@@ -1,0 +1,210 @@
+{
+  "ret": true,
+  "data": {
+    "bookList": [
+      {
+        "imgUrl": "static/img-classify/img-book/886-315-1553506342.jpg",
+        "id": "001",
+        "title": "图书",
+        "imgchildren": [
+          {
+            "id": "001",
+            "title":"总榜",
+            "imgUrl":"static/img-classify/img-book/160-160-1549016183.png"
+          },
+          {
+            "id": "002",
+            "title":"新书榜",
+            "imgUrl":"static/img-classify/img-book/160-160-2-1549016404.png"
+          },
+          {
+            "id": "003",
+            "title":"童书榜",
+            "imgUrl":"static/img-classify/img-book/3-tongscxb.png"
+          }
+        ],
+        "children": [
+          {
+            "id":"0",
+            "title": "小说",
+            "status": "false",
+            "children": [
+              {
+                "name": "社会",
+                "hot": ""
+              },
+              {
+                "name": "侦探/悬疑/推理",
+                "hot": "true"
+              },
+              {
+                "name": "情感",
+                "hot": ""
+              },
+              {
+                "name": "世界名著",
+                "hot": ""
+              },
+              {
+                "name": "历史",
+                "hot": ""
+              },
+              {
+                "name": "科幻",
+                "hot": ""
+              },
+              {
+                "name": "魔幻",
+                "hot": ""
+              }
+            ]
+          },
+          {
+            "id":"1",
+            "title": "文学",
+            "status": "false",
+            "children": [
+              {
+                "name": "中国现当代随笔",
+                "hot": ""
+              },
+              {
+                "name": "名家作品",
+                "hot": ""
+              },
+              {
+                "name": "文集",
+                "hot": ""
+              },
+              {
+                "name": "纪实文学",
+                "hot": ""
+              },
+              {
+                "name": "中国古诗词",
+                "hot": ""
+              },
+              {
+                "name": "中国古诗词",
+                "hot": ""
+              },
+              {
+                "name": "中国古诗词",
+                "hot": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "imgUrl": "static/img-classify/childrenBook/886x315-1553844361.jpg",
+        "id": "002",
+        "title": "童书",
+        "imgchildren": [
+          {
+            "id": "001",
+            "title":"童书畅销榜",
+            "imgUrl": "static/img-classify/childrenBook/1changxiaobang-1529564612.png"
+          },
+          {
+            "id": "002",
+            "title":"童书新书榜",
+            "imgUrl": "static/img-classify/childrenBook/2xinshubang-1529564612.png"
+          },
+          {
+            "id": "003",
+            "title":"0-2岁榜",
+            "imgUrl": "static/img-classify/childrenBook/30-2sbang-1529564612.png"
+          },
+          {
+            "id": "001",
+            "title":"3-6岁榜",
+            "imgUrl": "static/img-classify/childrenBook/43-6sbang-1529564612.png"
+          },
+          {
+            "id": "002",
+            "title":"7-10岁榜",
+            "imgUrl": "static/img-classify/childrenBook/57-10sbang-1529564612.png"
+          },
+          {
+            "id": "003",
+            "title":"11-14岁榜",
+            "imgUrl": "static/img-classify/childrenBook/611-14sbang-1529564612.png"
+          }
+        ],
+        "children": [
+          {
+            "id":"0",
+            "title": "童话世界",
+            "status": "false",
+            "children": [
+              {
+                "name": "社会",
+                "hot": ""
+              },
+              {
+                "name": "侦探/悬疑/推理",
+                "hot": "true"
+              },
+              {
+                "name": "情感",
+                "hot": ""
+              },
+              {
+                "name": "世界名著",
+                "hot": ""
+              },
+              {
+                "name": "历史",
+                "hot": ""
+              },
+              {
+                "name": "科幻",
+                "hot": ""
+              },
+              {
+                "name": "魔幻",
+                "hot": ""
+              }
+            ]
+          },
+          {
+            "id":"1",
+            "title": "文学",
+            "status": "false",
+            "children": [
+              {
+                "name": "中国现当代随笔",
+                "hot": ""
+              },
+              {
+                "name": "名家作品",
+                "hot": ""
+              },
+              {
+                "name": "文集",
+                "hot": ""
+              },
+              {
+                "name": "纪实文学",
+                "hot": ""
+              },
+              {
+                "name": "中国古诗词",
+                "hot": ""
+              },
+              {
+                "name": "中国古诗词",
+                "hot": ""
+              },
+              {
+                "name": "中国古诗词",
+                "hot": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -65,7 +65,7 @@ export default {
         padding-top .2rem
         float left
         position relative
-        height 3.2rem
+        height 30vh
         width 33%
         background #fff
         .warpper-img

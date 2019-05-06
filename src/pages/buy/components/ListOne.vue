@@ -22,15 +22,14 @@ export default {
     position relative
     width 100%
     overflow hidden
+    background #fff
     .wrapper
       position relative
       width 20%
-      float left
-      padding .1rem 0
-      height auto
+      height 13vh
       overflow hidden
+      float left
       .wrapper-img
-        position relative
-        height 1.5rem
         width 100%
+        height 100%
 </style>

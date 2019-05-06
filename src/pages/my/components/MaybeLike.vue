@@ -15,7 +15,7 @@
         </p>
         <span class="money-icon">¥<span class="money">{{item.price}}</span></span>
       </div>
-      <div class="bottom">您已经到达底部了！！</div>
+      <div class="bottomTitle">您已经到达底部了！！</div>
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default{
 <style lang="stylus" scoped>
   .Maybe
     position relative
-    padding-top .5rem
+    padding-top 2vh
     width 100%
     background #eff4fa
     .Maybetitle
@@ -42,57 +42,61 @@ export default{
       .title-icon
         color red
     .MaybeContent
-      position absolute
+      position relative
       overflow hidden
       width 100%
       float left
       background #eff4fa
-      padding-bottom 1.8rem
+      padding-bottom 12vh
       .Content-warpper
         position relative
         float left
-        margin-left .1rem
-        height 5.3rem
-        width 48%
+        margin-left 0.5%
+        width 49%
         background white
         margin-top .2rem
+        overflow hidden
+        padding-bottom .2rem
         .content-img
           width 100%
         .content-titel
           font-size .24rem
-          overflow: hidden;
-          -webkit-line-clamp: 2;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
+          overflow: hidden
+          -webkit-line-clamp: 2
+          text-overflow: ellipsis
+          display: -webkit-box
+          -webkit-box-orient: vertical
           height .5rem
           margin-top .1rem
           margin-left .3rem
+          margin-bottom .1rem
         .content-footer
-          text-align left
           position relative
+          overflow hidden
+          text-align left
           margin-top .2rem
           margin-left .3rem
+          margin-bottom .2rem
           font-size .23rem
           .dangdang
-            border .01rem solid #f2303c
+            border .02rem solid #f2303c
             color #f2303c
+            margin-right .1rem
           .dangdangqiang
             background-color #f2303c
             color white
+            margin-right .1rem
         .money-icon
-          position absolute
-          left 0
+          position relative
           margin-left .3rem
-          margin-top .2rem
           color #f2303c
           font-size .24rem
-          padding-bottom .1rem
+          margin-bottom .3rem
           .money
             font-size .28rem
-      .bottom
+      .bottomTitle
         position relative
         text-align center
-        top .35rem
+        top 2vh
         font-size .25rem
 </style>

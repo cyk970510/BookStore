@@ -42,8 +42,8 @@
         </div>
         <!--编辑图标-->
         <span v-if="!isfinash && editId != item.id" class="iconfont countedit" @click="editgoods(item.id)">&#xe642;</span>
-        <span v-if="editId == item.id" class="finashgoods" @click="tofinashEdit()">完成</span>
         <span v-if="editId == item.id" class="iconfont delecticon" @click="todelectgoods(item.id)">&#xe614;</span>
+        <span v-if="editId == item.id" class="finashgoods" @click="tofinashEdit()">完成</span>
         <span v-if="isfinash" class="delectgoods" @click="todelectgoods(item.id)">删除</span>
       </div>
       <!--商品底部信息-->
@@ -227,77 +227,88 @@ export default {
     position relative
     width 100%
     .Goodscount
-      height .8rem
+      height 5vh
       width 100%
       .countone
         width 100%
         display inline-block
-        margin-top .2rem
+        margin-top 1vh
         .countcheck
-          width .5rem
-          height .5rem
-          margin-left .2rem
+          width 3vh
+          height 3vh
+          margin-left 2vh
           -webkit-appearance radio
         .counticon
           position absolute
-          margin-left .3rem
-          font-size .5rem
+          margin-left 3vh
+          margin-top .5vh
+          font-size 2.5vh
           color red
         .conuttitle
-          margin-left 1.2rem
-          font-size .33rem
+          position absolute
+          margin-top .7vh
+          margin-left 8vh
+          font-size 2vh
         .edit
           display inline-block
           float right
-          font-size .28rem
+          font-size 2vh
           margin-right .5rem
           margin-top .1rem
         .finash
           display inline-block
           float right
-          font-size .3rem
+          font-size 2vh
           margin-right .5rem
           margin-top .1rem
     .wrapper
       width 100%
       background #fff
-      padding-top .2rem
+      padding-top 2vh
       .top
+        position relative
         width 100%
-        display flex
-        padding-bottom .2rem
+        padding-bottom 2vh
+        overflow hidden
         .goodscheck
-          display inline-block
-          width 1rem
-          height 1rem
-          margin-left .2rem
-          margin-right .1rem
-          margin-top .1rem
+          position relative
+          float left
+          width 3vh
+          height 3vh
+          top 5vh
+          margin-left 2vh
           -webkit-appearance radio
         .goodsimg
-          width 60%
-          margin-left .2rem
+          float left
+          margin-right 2vh
+          margin-left 2vw
         .add
-          width 50%
+          float left
+          margin-left 5%
+          width 35%
+          margin-top 3vh
           .down
             display inline-block
             margin-top .5rem
-            padding .2rem
+            padding 2vh
             background-color #eee
-            margin-right .2rem
+            margin-right 2vh
             border-radius .1rem
+            font-size 2vh
           .up
             display inline-block
             margin-top .5rem
-            padding .2rem
+            padding 2vh
             background-color #eee
-            margin-left .2rem
+            margin-left 2vh
             border-radius .1rem
+            font-size 2vh
         .goodsinfo
-          width 100%
-          margin-left .4rem
+          float left
+          width 40%
+          margin-left 1vh
           .infotitle
-            font-size .28rem
+            font-size 2vh
             text-overflow: -o-ellipsis-lastline;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -305,24 +316,26 @@ export default {
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
           .infoprice
-            margin-top .35rem
+            margin-top 3vh
             .price
-              font-size .32rem
+              font-size 2vh
               color red
             .noprice
               color #777
-              font-size .23rem
+              font-size 1.5vh
               text-decoration line-through
           .infoimg
-            font-size .23rem
+            font-size 2vh
             margin-top .3rem
-            width .7rem
-            padding .05rem
+            width 30%
+            padding .3vh
             background red
             color white
           .infocount
-            margin-top .2rem
+            margin-top 2vh
         .delectgoods
+          position relative
+          float right
           display inline-block
           padding 0 .1rem
           padding-top .3rem
@@ -330,93 +343,99 @@ export default {
           height 1rem
           background red
           color white
-          margin-top .5rem
-          margin-right .2rem
+          margin-right 2vh
+          margin-top 5vh
           border-radius .1rem
         .countedit
-          position relative
-          display inline-block
+          position absolute
           font-size .5rem
-          margin-top 1.5rem
-          margin-right .2rem
+          top 14vh
+          right 2vh
         .delecticon
-          position relative
-          right 1.5rem
-          top 2rem
-          font-size .4rem
+          position absolute
+          right 25%
+          bottom 20%
+          font-size 3vh
           color #aaa
         .finashgoods
+          position relative
           display inline-block
+          float right
           padding 0 .1rem
           padding-top .6rem
           text-align center
-          height 1.3rem
+          height 6.4vh
           color white
-          margin-top .5rem
-          margin-right .1rem
+          margin-top 5vh
+          margin-right 2vh
           border-radius .1rem
-          background #cacaca
+          background red
       .bot
+        position relative
         width 100%
         padding-bottom .2rem
         .jiajia
-          font-size .26rem
-          margin-left .8rem
+          font-size 2vh
+          margin-left 7vh
           border .01rem solid red
           color red
         .zhusi
           margin-left .3rem
-          font-size .28rem
+          font-size 2vh
         .go
-          font-size .26rem
+          font-size 2vh
     .total
       position fixed
+      background #fff
       z-index 100
       bottom 7.9%
       width 100%
-      height .8rem
-      background #fff
-      padding-bottom .3rem
+      height 3vh
+      padding 2vh 0
       .Goodscount
-        height .8rem
-        margin-top .2rem
+        overflow hidden
+        margin-left 2vh
         .countcheck
-          margin-left .2rem
-          width .4rem
-          height .4rem
+          margin-left 2vh
+          width 3vh
+          height 3vh
           -webkit-appearance radio
         .checkall
           display inline-block
           vertical-align middle
-          font-size .35rem
-          margin-left .2rem
+          font-size 2vh
+          margin-left 2vh
         .conut
           display inline-block
           vertical-align middle
-          margin-left 1.5rem
-          font-size .35rem
+          margin-left 6vh
+          font-size 2vh
         .totalmoney
+          position absolute
+          margin-top .6vh
+          margin-left 1vh
           display inline-block
           vertical-align bottom
-          font-size .32rem
+          font-size 2vh
           color red
         .jiesuan
           position absolute
-          display inline-block
+          display flex
           background red
           right 0
           top 0
           width 22%
           height 100%
-          text-align center
+          align-items center
+          justify-content center
           .title
             display inline-block
-            margin-top .3rem
-            font-size .3rem
+            font-size 2vh
             font-weight bold
             color white
           .goodscount
-            font-size .3rem
+            display inline-block
+            font-size 2vh
             font-weight bold
             color white
 </style>

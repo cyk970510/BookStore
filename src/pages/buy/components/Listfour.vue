@@ -37,6 +37,7 @@ export default {
     overflow hidden
     background #f5f5f5
     .listfourbody
+      width 100%
       .one
         width 100%
         overflow hidden
@@ -45,9 +46,8 @@ export default {
           position absolute
           width 100%
           background-image url("../../../../static/img-buy/listthree/9.9-background.d4afbba.png")
-          background-repeat no-repeat
-          height 4rem
-          border-radius 0 0 .2rem .2rem
+          height 23vh
+          border-radius 0 0 4vh 4vh
         .wrapper
           position relative
           width 100%
@@ -62,16 +62,16 @@ export default {
             color white
             font-weight bold
           .swippeer
-            width 96%
+            width 98%
             overflow-x scroll
             white-space nowrap
             margin-top .2rem
             margin-bottom .2rem
-            padding-left .2rem
+            padding-left 1vh
             .wrapper
               position relative
               display inline-block
-              height 3.4rem
+              height 24vh
               width 28%
               border-radius .15rem
               margin 0 .1rem
@@ -79,18 +79,21 @@ export default {
               box-shadow: 0 0.03rem 0.12rem #d7d7d7
               .swiper-img
                 width 100%
+                height 16vh
               .Goodsname
-                font-size .26rem
-                margin-top .2rem
+                height 2vh
+                font-size 2vh
+                margin-top 2vh
                 text-align center
                 overflow:hidden;
                 text-overflow:ellipsis;
                 width 90%
                 margin-left .1rem
-                white-space:nowrap
+                white-space nowrap
               .Goodsprice
-                margin-top .1rem
-                font-size .32rem
+                height 2vh
+                margin-top 1vh
+                font-size 2vh
                 color red
                 text-align center
 </style>

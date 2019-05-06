@@ -57,16 +57,16 @@ export default {
       overflow hidden
       background #eff4fa
       .content-warpper
+        position relative
         margin-left .02rem
         padding-top .2rem
         float left
-        position relative
-        height 3.2rem
+        overflow hidden
+        height 30vh
         width 33%
         background #fff
         .warpper-img
           width 100%
-          height 100%
           .img-w
             width 100%
         .warpper-title

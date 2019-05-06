@@ -83,8 +83,11 @@ export default {
     width 100%
     overflow hidden
     background #f5f5f5
+    margin-top 1vh
     .listthreebody
       margin-bottom .3rem
+      overflow hidden
+      width 100%
       .one
         width 100%
         overflow hidden
@@ -93,18 +96,16 @@ export default {
           position absolute
           width 100%
           background-image url("../../../../static/img-buy/listthree/9.9-background.d4afbba.png")
-          background-repeat no-repeat
-          height 4rem
-          border-radius 0 0 .2rem .2rem
+          height 27vh
+          border-radius 0 0 5vh 5vh
         .wrapper
           position relative
           width 100%
           overflow hidden
           .header
             width 100%
-            height .5rem
-            margin-top .35rem
-            padding-bottom .2rem
+            height 5vh
+            margin-top 2vh
             .headerimg
               margin auto
               width 40%
@@ -127,10 +128,11 @@ export default {
             margin-top .2rem
             margin-bottom .2rem
             padding-left .2rem
+            overflow-y hidden
             .wrapper
               position relative
               display inline-block
-              height 3.4rem
+              overflow hidden
               width 28%
               border-radius .15rem
               margin 0 .1rem
@@ -138,8 +140,10 @@ export default {
               box-shadow: 0 0.03rem 0.12rem #d7d7d7;
               .swiper-img
                 width 100%
+                height 18vh
               .Goodsname
-                font-size .26rem
+                height 2vh
+                font-size 2vh
                 margin-top .2rem
                 text-align center
                 overflow:hidden;
@@ -148,21 +152,23 @@ export default {
                 margin-left .1rem
                 white-space:nowrap
               .Goodsprice
+                height 2vh
                 margin-top .1rem
-                font-size .32rem
+                font-size 2vh
                 color red
                 text-align center
               .noprice
-                font-size .22rem
+                height 2vh
+                font-size 1vh
                 margin-top .1rem
                 text-align center
             .swippertomore
               position relative
               display inline-block
-              height 2rem
+              height 20vh
               width 28%
               vertical-align top
-              margin-top .5rem
+              margin-top 4.5vh
               margin-right .5rem
               text-align center
               background none
@@ -170,11 +176,11 @@ export default {
               .moreicon
                 display inline-block
                 margin-top .7rem
-                font-size .24rem
+                font-size 3vh
                 color white
               .moretitle
                 margin-top .2rem
-                font-size .24rem
+                font-size 2vh
                 color white
       .listGoods
         position relative
@@ -209,54 +215,58 @@ export default {
             width 100%
             margin-top .4rem
             .img
-              width 2.4rem
-              height 2.4rem
+              width 22vw
+              height 14vh
               margin-left .2rem
             .contentright
               position relative
               margin-left .2rem
               margin-top .2rem
-              width 5rem
+              width 70vw
               .title
                 position relative
-                right 0rem
-                overflow:hidden;
-                text-overflow:ellipsis;
+                right 0
+                overflow:hidden
+                text-overflow:ellipsis
                 width 90%
                 margin-left .1rem
-                white-space:nowrap
+                white-space nowrap
+                font-size 2vh
               .momey
                 position relative
                 display inline-block
                 margin-top .7rem
                 margin-left .2rem
                 .price
-                  font-size .33rem
+                  font-size 2vh
                   color red
                 .noprice
-                  font-size .22rem
+                  font-size 1.5vh
                   color #777
                   text-decoration line-through
                   margin-left .3rem
               .commont
-                position relative
+                position absolute
+                bottom 0
+                right 0
                 display inline-block
-                margin-top .3rem
-                margin-left 1.5rem
+                margin-top 1vh
+                margin-left 15vh
+                margin-bottom 1vh
                 .commontnumber
                   .commonticon
-                    font-size .18rem
+                    font-size 1.5vh
                     color #777
                   .commontnumb
-                    font-size .18rem
+                    font-size 1.5vh
                     color #777
                 .good
                   margin-left .2rem
                   .goodicon
-                    font-size .18rem
+                    font-size 1.5vh
                     color #777
                   .goodnumb
-                    font-size .18rem
+                    font-size 1.5vh
                     color #777
                 .caricon
                   display inline-block

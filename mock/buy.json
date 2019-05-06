@@ -1,0 +1,443 @@
+{
+  "ret": true,
+  "data": {
+    "Listone": [
+      {
+        "id": "0001",
+        "imgUrl": "static/img-buy/listone/20180825153505715.png"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "static/img-buy/listone/2018082515383576435.png"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "static/img-buy/listone/2018082515395286917.png"
+      },
+      {
+        "id": "0004",
+        "imgUrl": "static/img-buy/listone/2018083116044590576.png"
+      },
+      {
+        "id": "0005",
+        "imgUrl": "static/img-buy/listone/2018083116355544875.png"
+      },
+      {
+        "id": "0006",
+        "imgUrl": "static/img-buy/listone/2018083116363087335.png"
+      },
+      {
+        "id": "0007",
+        "imgUrl": "static/img-buy/listone/2018083116365438226.png"
+      },
+      {
+        "id": "0008",
+        "imgUrl": "static/img-buy/listone/2018083116373380162.png"
+      },
+      {
+        "id": "0009",
+        "imgUrl": "static/img-buy/listone/coupon-1537505152.png"
+      },
+      {
+        "id": "0010",
+        "imgUrl": "static/img-buy/listone/ddpp-1537350824.png"
+      }
+    ],
+    "Listtwo": [
+      {
+        "id": "001",
+        "imgUrl": "static/img-buy/listtwo/23761145-1_b_2.jpg",
+        "title": "",
+        "discount": "图书5折封顶"
+      },
+      {
+        "id": "002",
+        "imgUrl": "static/img-buy/listtwo/22800646-1_b_29.gif",
+        "title": "教辅",
+        "discount": "没满79减30"
+      },
+      {
+        "id": "003",
+        "imgUrl": "static/img-buy/listtwo/24188188-1_b_3.jpg",
+        "title": "",
+        "discount": "4月图书49元5件"
+      },
+      {
+        "id": "004",
+        "imgUrl": "static/img-buy/listtwo/20264155-1_b_2.jpg",
+        "title": "外语考试",
+        "discount": "每满100减30"
+      },
+      {
+        "id": "005",
+        "imgUrl": "static/img-buy/listtwo/1901112692-1_b_6.jpg",
+        "title": "",
+        "discount": "次书参加电子书满3件6折"
+      },
+      {
+        "id": "006",
+        "imgUrl": "static/img-buy/listtwo/26483831-1_b_4.jpg",
+        "title": "教辅",
+        "discount": "每满59减10"
+      }
+    ],
+    "Listthree": [
+      {
+        "id": "01",
+        "imgUrl": "static/img-buy/listthree/下载.png",
+        "childrenOne": [
+          {
+            "id": "001",
+            "imgUrl": "static/img-buy/listthree/1432055022-1_h.jpg",
+            "title": "演沃YANWO 2019春夏新款女装漏肩时尚T恤阔腿裤两件套时髦俏皮小心机套装",
+            "price": "¥85.00",
+            "noprice": "¥499.00"
+          },
+          {
+            "id": "002",
+            "imgUrl": "static/img-buy/listthree/25278074-1_h.jpg",
+            "title": "莫斯科绅士（2018豆瓣年度高分图书，《新周刊》十大好书，奥巴马力荐，《泰晤士报》等9家国际媒体年度图书）",
+            "price": "¥29.00",
+            "noprice": "¥79.80"
+          },
+          {
+            "id": "003",
+            "imgUrl": "static/img-buy/listthree/1126981814-1_h.jpg",
+            "title": "【单件包邮】儿童发夹套装头饰女童发饰韩国 公主可爱宝宝发圈蝴蝶结发卡小饰品",
+            "price": "¥16.80",
+            "noprice": "¥199.00"
+          },
+          {
+            "id": "004",
+            "imgUrl": "static/img-buy/listthree/1471932139-1_h.jpg",
+            "title": "GLEMALL/森马旗下潮牌 男短袖T恤潮流衣服新款夏季男士圆领体恤多色情侣款",
+            "price": "¥39.00",
+            "noprice": "¥129.00"
+          },
+          {
+            "id": "005",
+            "imgUrl": "static/img-buy/listthree/1150490998-1_h.jpg",
+            "title": "泰蜜熊柠檬榨汁杯橙汁手动榨汁机迷你橙子压榨机简易榨汁机家用水果小型食品级pp+小麦材质健康环保",
+            "price": "¥15.00",
+            "noprice": "¥89.00"
+          },
+          {
+            "id": "006",
+            "imgUrl": "static/img-buy/listthree/1193412810-1_h.jpg",
+            "title": "【限时秒杀包邮】幼儿英语启蒙绘本全10册 英文绘本0-3-6岁儿童零基础启蒙有声故事带音频教材小学一二年级读物幼儿园自学宝宝早教书自然拼读",
+            "price": "¥19.80",
+            "noprice": "¥150.00"
+          },
+          {
+            "id": "007",
+            "imgUrl": "static/img-buy/listthree/25583044-1_h.jpg",
+            "title": "极简思维：颠覆传统思维模式的极简法则",
+            "price": "¥11.90",
+            "noprice": "¥42.00"
+          },
+          {
+            "id": "008",
+            "imgUrl": "static/img-buy/listthree/1276860497-1_h.jpg",
+            "title": "【劵后价：53元】女宝宝出行防晒衣 童装女童春夏装镂空透气凉爽时尚公主薄款外套",
+            "price": "¥39.00",
+            "noprice": "¥799.00"
+          },
+          {
+            "id": "009",
+            "imgUrl": "static/img-buy/listthree/1088988099-1_h.jpg",
+            "title": "佳奥记忆棉靠垫办公汽车腰垫腰靠抱枕靠枕靠背_竹炭基础款",
+            "price": "¥79.00",
+            "noprice": "¥219.00"
+          },
+          {
+            "id": "010",
+            "imgUrl": "static/img-buy/listthree/1376374485-1_h.jpg",
+            "title": "贝亲Pigeon宝宝水杯 鸭嘴式双层保温 儿童饮水杯 训练杯DA30",
+            "price": "¥15.00",
+            "noprice": "¥42.00"
+          }
+        ],
+        "childrentwo": [
+          {
+            "id": "0001",
+            "header": "畅销榜第10名",
+            "imgUrl": "static/img-buy/listthree/25547473-1_h.jpg",
+            "title": "神奇校车大家族（全73册）",
+            "price": "¥ 414.00",
+            "noprice": "¥ 828.00",
+            "commontnumb": "1216807",
+            "goodnumb": "4.71"
+          },
+          {
+            "id": "0002",
+            "header": "畅销榜第7名",
+            "imgUrl": "static/img-buy/listthree/24044343-1_h.jpg",
+            "title": "写给儿童的中国地理（全14册）",
+            "price": "¥ 196.00",
+            "noprice": "¥ 392.00",
+            "commontnumb": "198549",
+            "goodnumb": "4.92"
+          },
+          {
+            "id": "0003",
+            "header": "畅销榜第13名",
+            "imgUrl": "static/img-buy/listthree/24193586-1_h.jpg",
+            "title": "小牛顿科学馆：全新升级版 （科学蓝，30册礼品装）",
+            "price": "¥ 300.00",
+            "noprice": "¥ 600.00",
+            "commontnumb": "38036",
+            "goodnumb": "4.5"
+          },
+          {
+            "id": "0004",
+            "header": "畅销榜第15名",
+            "imgUrl": "static/img-buy/listthree/23356805-1_h.jpg",
+            "title": "汉声数学图画书（全41册+妈妈手册）",
+            "price": "¥ 540.00",
+            "noprice": "¥ 1080.00",
+            "commontnumb": "61308",
+            "goodnumb": "4.91"
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "imgUrl": "static/img-buy/listthree/下载.png",
+        "childrenOne": [
+          {
+            "id": "001",
+            "imgUrl": "static/img-buy/listthree/1432055022-1_h.jpg",
+            "title": "演沃YANWO 2019春夏新款女装漏肩时尚T恤阔腿裤两件套时髦俏皮小心机套装",
+            "price": "¥85.00",
+            "noprice": "¥499.00"
+          },
+          {
+            "id": "002",
+            "imgUrl": "static/img-buy/listthree/25278074-1_h.jpg",
+            "title": "莫斯科绅士（2018豆瓣年度高分图书，《新周刊》十大好书，奥巴马力荐，《泰晤士报》等9家国际媒体年度图书）",
+            "price": "¥29.00",
+            "noprice": "¥79.80"
+          },
+          {
+            "id": "003",
+            "imgUrl": "static/img-buy/listthree/1126981814-1_h.jpg",
+            "title": "【单件包邮】儿童发夹套装头饰女童发饰韩国 公主可爱宝宝发圈蝴蝶结发卡小饰品",
+            "price": "¥16.80",
+            "noprice": "¥199.00"
+          },
+          {
+            "id": "004",
+            "imgUrl": "static/img-buy/listthree/1471932139-1_h.jpg",
+            "title": "GLEMALL/森马旗下潮牌 男短袖T恤潮流衣服新款夏季男士圆领体恤多色情侣款",
+            "price": "¥39.00",
+            "noprice": "¥129.00"
+          },
+          {
+            "id": "005",
+            "imgUrl": "static/img-buy/listthree/1150490998-1_h.jpg",
+            "title": "泰蜜熊柠檬榨汁杯橙汁手动榨汁机迷你橙子压榨机简易榨汁机家用水果小型食品级pp+小麦材质健康环保",
+            "price": "¥15.00",
+            "noprice": "¥89.00"
+          },
+          {
+            "id": "006",
+            "imgUrl": "static/img-buy/listthree/1193412810-1_h.jpg",
+            "title": "【限时秒杀包邮】幼儿英语启蒙绘本全10册 英文绘本0-3-6岁儿童零基础启蒙有声故事带音频教材小学一二年级读物幼儿园自学宝宝早教书自然拼读",
+            "price": "¥19.80",
+            "noprice": "¥150.00"
+          },
+          {
+            "id": "007",
+            "imgUrl": "static/img-buy/listthree/25583044-1_h.jpg",
+            "title": "极简思维：颠覆传统思维模式的极简法则",
+            "price": "¥11.90",
+            "noprice": "¥42.00"
+          },
+          {
+            "id": "008",
+            "imgUrl": "static/img-buy/listthree/1276860497-1_h.jpg",
+            "title": "【劵后价：53元】女宝宝出行防晒衣 童装女童春夏装镂空透气凉爽时尚公主薄款外套",
+            "price": "¥39.00",
+            "noprice": "¥799.00"
+          },
+          {
+            "id": "009",
+            "imgUrl": "static/img-buy/listthree/1088988099-1_h.jpg",
+            "title": "佳奥记忆棉靠垫办公汽车腰垫腰靠抱枕靠枕靠背_竹炭基础款",
+            "price": "¥79.00",
+            "noprice": "¥219.00"
+          },
+          {
+            "id": "010",
+            "imgUrl": "static/img-buy/listthree/1376374485-1_h.jpg",
+            "title": "贝亲Pigeon宝宝水杯 鸭嘴式双层保温 儿童饮水杯 训练杯DA30",
+            "price": "¥15.00",
+            "noprice": "¥42.00"
+          }
+        ],
+        "childrentwo": [
+          {
+            "id": "0001",
+            "header": "畅销榜第10名",
+            "imgUrl": "static/img-buy/listthree/25547473-1_h.jpg",
+            "title": "神奇校车大家族（全73册）",
+            "price": "¥ 414.00",
+            "noprice": "¥ 828.00",
+            "commontnumb": "1216807",
+            "goodnumb": "4.71"
+          },
+          {
+            "id": "0002",
+            "header": "畅销榜第7名",
+            "imgUrl": "static/img-buy/listthree/24044343-1_h.jpg",
+            "title": "写给儿童的中国地理（全14册）",
+            "price": "¥ 196.00",
+            "noprice": "¥ 392.00",
+            "commontnumb": "198549",
+            "goodnumb": "4.92"
+          },
+          {
+            "id": "0003",
+            "header": "畅销榜第13名",
+            "imgUrl": "static/img-buy/listthree/24193586-1_h.jpg",
+            "title": "小牛顿科学馆：全新升级版 （科学蓝，30册礼品装）",
+            "price": "¥ 300.00",
+            "noprice": "¥ 600.00",
+            "commontnumb": "38036",
+            "goodnumb": "4.5"
+          },
+          {
+            "id": "0004",
+            "header": "畅销榜第15名",
+            "imgUrl": "static/img-buy/listthree/23356805-1_h.jpg",
+            "title": "汉声数学图画书（全41册+妈妈手册）",
+            "price": "¥ 540.00",
+            "noprice": "¥ 1080.00",
+            "commontnumb": "61308",
+            "goodnumb": "4.91"
+          }
+        ]
+      }
+    ],
+    "Listfour": [
+      {
+            "id": "001",
+            "imgUrl": "static/img-buy/listfour/23579654-1_h.jpg",
+            "title": "三体全集123 刘慈欣 三体1+三体2黑暗森林+三体3死神永生",
+            "price": "¥49.40"
+          },
+          {
+            "id": "002",
+            "imgUrl": "static/img-buy/listfour/1458481347-1_h.jpg",
+            "title": "之江新语 浙江人民出版社",
+            "price": "¥24.40"
+          },
+          {
+            "id": "003",
+            "imgUrl": "static/img-buy/listfour/1228417162-1_h.jpg",
+            "title": "【正版包邮】褚时健传 中信出版社",
+            "price": "¥¥35.90"
+          },
+          {
+            "id": "004",
+            "imgUrl": "static/img-buy/listfour/1043231282-1_h.jpg",
+            "title": "中国文学史 钱穆 讲述；叶龙 记录整理",
+            "price": "¥39.00"
+          },
+          {
+            "id": "005",
+            "imgUrl": "static/img-buy/listfour/1325502122-1_h.jpg",
+            "title": "多元宗教背景下的中国文学 中西书局有限公司",
+            "price": "¥15.00"
+          },
+          {
+            "id": "006",
+            "imgUrl": "static/img-buy/listfour/1460037777-1_h.jpg",
+            "title": "格非研究资料 百花洲文艺出版社",
+            "price": "¥19.80"
+          },
+          {
+            "id": "007",
+            "imgUrl": "static/img-buy/listfour/26922275-1_h.jpg",
+            "title": "人生海海，劈浪前行（限量签名版，售完即开放普通版）",
+            "price": "¥11.90"
+          },
+          {
+            "id": "008",
+            "imgUrl": "static/img-buy/listfour/22569763-1_h.jpg",
+            "title": "鼠王",
+            "price": "¥39.00"
+          },
+          {
+            "id": "009",
+            "imgUrl": "static/img-buy/listfour/25137790-1_h.jpg",
+            "title": "活着（2017年新版）",
+            "price": "¥79.00"
+          },
+          {
+            "id": "010",
+            "imgUrl": "static/img-buy/listfour/23761145-1_h.jpg",
+            "title": "人间失格（日本小说家太宰治的自传体小说）",
+            "price": "¥15.00"
+          },
+         {
+              "id": "011",
+              "imgUrl": "static/img-buy/listfour/23579654-1_h.jpg",
+              "title": "三体：全三册 刘慈欣代表作，亚洲首部“雨果奖”获奖作品！",
+              "price": "¥19.80"
+            },
+            {
+              "id": "012",
+              "imgUrl": "static/img-buy/listfour/24187457-1_h.jpg",
+              "title": "淘宝客服：把任何东西卖给任何人(团购，请致电400-106-6666转6)",
+              "price": "¥11.90"
+            },
+            {
+              "id": "013",
+              "imgUrl": "static/img-buy/listfour/23694647-1_h.jpg",
+              "title": "摆渡人（系列畅销千万册。如果命运是一条孤独的河流，谁会是你灵魂的摆渡人？《摆渡人》完结篇即将上市！）",
+              "price": "¥39.00"          },
+            {
+              "id": "014",
+              "imgUrl": "static/img-buy/listfour/25238195-1_h.jpg",
+              "title": "追风筝的人（2018年新版）",
+              "price": "¥79.00"
+            },
+            {
+              "id": "015",
+              "imgUrl": "static/img-buy/listfour/23751637-1_h.jpg",
+              "title": "浮生六记（汪涵、胡歌推荐，畅销250万册。沈复给芸娘的绝美情书）【果麦经典】",
+              "price": "¥15.00"
+            },
+            {
+              "id": "016",
+              "imgUrl": "static/img-buy/listfour/24198400-1_h.jpg",
+              "title": "我喜欢生命本来的样子(周国平经典散文作品集)",
+              "price": "¥39.00"          },
+            {
+              "id": "017",
+              "imgUrl": "static/img-buy/listfour/25252408-1_h.jpg",
+              "title": "神奇校车·图画书版（全12册，新增《科学博览会》1册）",
+              "price": "¥79.00"
+            },
+            {
+              "id": "018",
+              "imgUrl": "static/img-buy/listfour/23604128-1_h.jpg",
+              "title": "皮囊（畅销300万册的国民读本，刘德华、李敬泽作序。繁体版面世即进入台湾诚品、博客来畅销榜单）",
+              "price": "¥15.00"
+            },
+             {
+              "id": "019",
+              "imgUrl": "static/img-buy/listfour/23427436-1_h.jpg",
+              "title": "写给儿童的中国历史（全14册）",
+              "price": "¥79.00"
+            },
+            {
+              "id": "020",
+              "imgUrl": "static/img-buy/listfour/24182626-1_h.jpg",
+              "title": "新手学会计：从有证书到干好活（全新案例版）",
+              "price": "¥15.00"
+            }
+    ]
+  }
+}

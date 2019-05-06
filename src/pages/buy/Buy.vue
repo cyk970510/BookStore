@@ -114,11 +114,12 @@ export default {
   .buy
     margin 0
     padding 0
+    background #eee
     .uptotop
       position fixed
       bottom 10%
       right .15rem
-      width 1rem
+      width 10%
       z-index 800
       .topimg
         width 100%

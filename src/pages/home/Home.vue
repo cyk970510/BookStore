@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('/api/index.json?city=' + this.city)
+      axios.get('/api/index.json')
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
@@ -130,7 +130,7 @@ export default {
       position fixed
       top 50%
       right 0
-      width 1rem
+      width 10%
       z-index 999
       .img-gif1
         width 100%
@@ -138,7 +138,7 @@ export default {
       position fixed
       bottom 9%
       right .3rem
-      width 1rem
+      width 10%
       z-index 800
       .up-img
         width 100%

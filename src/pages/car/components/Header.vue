@@ -6,7 +6,9 @@
           <div class="iconfont back-icon">&#xe624;</div>
         </div>
       </router-link>
-      <div class="header-input">购物车</div>
+      <div class="header-input">
+        购物车
+      </div>
       <div class="header-right" @click="handleNav" v-show="!isfalse">
         <span class="iconfont arrow-icon">&#xe751;</span>
       </div>
@@ -15,7 +17,9 @@
       </div>
       <div :class="{headeractive: isfalse}"></div>
     </div>
-    <!--顶部隐藏的导航栏-->
+    <!--<transition name="custom-classes-transition"-->
+                <!--enter-active-class="animated fadeIn"-->
+                <!--leave-active-class="animated fadeOut">-->
     <div class="footer" :class="{active: isfalse}">
       <div class="middle">
         <router-link class="footte-1"
@@ -27,13 +31,14 @@
         </router-link>
       </div>
     </div>
+    <!--</transition>-->
   </div>
 </template>
 
 <script>
 import {mapMutations} from 'vuex'
 export default {
-  name: 'CarHeader',
+  name: 'BuyHeader',
   props: {
     headerList: Array
   },
@@ -64,56 +69,46 @@ export default {
     width 100%
     .header-top
       position relative
-      display: flex
-      line-height: $headerHeight
+      line-height: 5.5vh
       background: #fff
       color: #fff
       .header-left
-        width: .64rem
         float: left
+        margin-left 1vh
         .back-icon
-          display block
-          text-align center
-          text-align: center
-          font-size: .4rem
-          margin-left .1rem
-          margin-top .1rem
+          font-size: 2vh
           color gray
           transition: background .3s;
       .header-input
-        flex: 1
-        height: .64rem
-        line-height: .64rem
-        margin-top: .22rem
-        margin-left: .2rem
+        height: 5vh
         color: #333
         text-align center
-        font-size .3rem
+        font-size 2vh
+        margin-right 4vh
       .header-right
-        min-width: 1.04rem
-        padding: 0.1rem
-        float: right
-        text-align: center
+        position absolute
+        top 0
+        right 2vh
         color: #fff
         .arrow-icon
           display block
           text-align center
-          margin-left: -.04rem
-          font-size: .54rem
+          font-size: 3vh
           color #7a8992
         .error-icon
           color red
-          font-size .5rem
+          font-size 3vh
       .headeractive
         position absolute
         display block
         content " "
-        right .4rem
+        right 2vh
         bottom -.05rem
         width .4rem
         height .2rem
         background: url(../../../../static/img/bottom-icon/connector.png) no-repeat center 0;
     .footer
+      z-index 1
       width 100%
       background-color #eee
       overflow hidden
@@ -123,13 +118,12 @@ export default {
       .middle
         padding .13rem 0
         .footte-1
-          margin-top .1rem
-          font-size .3rem
+          margin-top 0.1rem
+          font-size 2vh
           .img-1
-            margin-left .3rem
-            padding 0 .2rem
+            padding 0 5%
             width 10%
             color #4d525d
     .active
-      height 1rem
+      height 8vh
 </style>

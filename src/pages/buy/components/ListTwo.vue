@@ -34,7 +34,7 @@ export default {
     background-image url("../../../../static/img-buy/listtwo/九宫格.5e5e35d.png")
     .header
       position relative
-      height .4rem
+      height 2vh
       width 100%
       padding .2rem 0
       text-align center
@@ -56,31 +56,35 @@ export default {
       position relative
       width 100%
       overflow hidden
-      padding .1rem .2rem
+      padding .1rem 4%
       padding-bottom .3rem
       .wrapper
         position relative
         float left
-        width 28.5%
-        margin-left .2rem
+        width 30%
+        margin-right 1%
         margin-top .2rem
         background #fff
-        border-radius .15rem
-        height 3rem
+        border-radius 2vh
+        height 22vh
         .title
           text-align center
           width 100%
           color black
-          font-size .3rem
-          margin-top .1rem
+          font-size 2vh
+          margin-top 0.5vh
+          overflow hidden
         .discount
           width 100%
           color #943dff
-          font-size .24rem
+          font-size 1.5vh
           text-align center
-          margin-top .1rem
+          margin-top 1vh
+          overflow hidden
         .contentimg
           position absolute
-          bottom .1rem
+          bottom 1%
+          height 16vh
+          border-radius 2vh
           width 100%
 </style>

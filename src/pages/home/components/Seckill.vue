@@ -41,10 +41,9 @@ export default {
 
 <style lang="stylus" scoped>
   .hot
-    overflow hidden
-    line-height 1rem
+    position relative
     height 53%
-    margin-top .8rem
+    margin-top .2rem
     background #fff
     .hot-header
       position relative
@@ -68,16 +67,15 @@ export default {
           color #fff
     .hot-swiper
       overflow-y hidden
-      overflow-x auto
+      overflow-x scroll
       white-space: nowrap
-      height 3.5rem
       padding 0 .24rem
       margin-top .2rem
       .wrapper
         position relative
         display: inline-block
-        height 2.7rem
-        width 2rem
+        overflow-x hidden
+        width 20%
         margin 0 .1rem
         .wrapper-img
           width 100%

@@ -74,21 +74,22 @@ export default {
     bottom 0
     left 0
     width 100%
+    height 8%
     background #fff
+    display flex
+    align-items center
+    justify-content center
     .footer
       position relative
       float left
-      margin-left .3rem
-      padding .1rem .1rem
-      width 13%
+      width 20%
       text-align center
       .footerbox
         color RGB(122,126,134)
         .footer-icon
           display inline-block
-          margin 0 auto
           padding .15rem 0
-          font-size .4rem
+          font-size 2vh
         .footer-title
           font-size .24rem
           width 100%

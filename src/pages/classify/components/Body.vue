@@ -127,34 +127,32 @@ export default {
   .body
     position relative
     float left
-    width 78.6%
+    width 76.6%
     overflow-y scroll
     background-color #eff4fa
-    height 11rem
+    height 86%
+    padding-left 2%
     .body-right
       .right-img
         position relative
-        width 95%
-        padding-bottom .1rem
-        margin-left .2rem
+        width 99%
+        padding-bottom 1vh
         overflow hidden
         .img-a
           width 100%
       .right-underimg
         position relative
-        width 95%
-        height 1rem
-        padding-bottom .1rem
-        margin-left .1rem
-        margin-top .2rem
+        width 100%
+        height 8vh
+        margin-top 1vh
+        margin-bottom 1vh
         overflow hidden
         .underimmg-box
           position relative
           float left
-          width 47%
-          margin-left .1rem
-          padding-bottom .2rem
-          padding-right .06rem
+          width 48%
+          margin-left 1%
+          padding-bottom 2vh
           background-color white
           .box-title
             .title-big
@@ -162,66 +160,60 @@ export default {
               display block
               margin-top .3rem
               margin-left .2rem
-              font-size .28rem
+              font-size 2vh
               font-weight bold
               color black
             .title-small
               display block
               margin-top .2rem
               margin-left .2rem
-              font-size .23rem
+              font-size 1.5vh
               color gray
           .box-icon
             display block
             position absolute
             right .2rem
             top 40%
-            font-size .3rem
+            font-size 1.5vh
             color black
       .right-bangdan
         position relative
-        width 95%
-        margin-top .2rem
-        margin-left .2rem
+        width 99%
         background-color white
         overflow hidden
         .bangdan-header
           position relative
           color black
-          font-size .26rem
+          font-size 2vh
           font-weight bold
-          margin-top .2rem
-          margin-left .2rem
-          padding-top .1rem
+          margin-top 1vh
+          margin-left 2vh
+          padding-top 1vh
         .bangdan-img
           position relative
-          margin-top .2rem
+          margin-top 1vh
           width 100%
           overflow hidden
-          margin-left .2rem
           background-color white
           .img-content
             float left
             width 20%
-            margin-left .2rem
-            padding 0 .1rem
-            margin-right .2rem
+            padding 0 6%
             margin-top .2rem
             padding-bottom .2rem
             .content-img
               width 100%
             .content-title
+              text-align center
               width 100%
               display block
               font-size .21rem
-              margin-left .3rem
-              margin-top .3rem
+              margin-top 2vh
       .right-xiaoshuo
         position relative
-        width 95%
+        width 99%
         margin-top .2rem
         background-color #fff
-        margin-left .2rem
         overflow hidden
         .xiaoshuo-header
           width 100%
@@ -230,12 +222,12 @@ export default {
           .header-lefttitle
             display inline-block
             float left
-            margin-left .2rem
+            margin-left 2vh
             .left-title
-              font-size .25rem
+              font-size 1.5vh
               font-weight bold
             .left-icon
-              font-size .23rem
+              font-size 1.2vh
           .header-righttitle
             display inline-block
             font-size .25rem
@@ -249,7 +241,6 @@ export default {
           position relative
           width 100%
           margin-top .2rem
-          margin-left .2rem
           overflow hidden
           .content-ul
             position relative
@@ -260,7 +251,7 @@ export default {
             .ul-li
               float left
               width 23%
-              padding .2rem .25rem
+              padding 2vh 5%
               .li-word
                 display inline-block
                 overflow hidden
@@ -276,10 +267,10 @@ export default {
                 position relative
                 margin-left .6rem
                 margin-bottom -.2rem
-
               .li-zhankai
                 display inline-block
-                margin-left .4rem
+                text-align center
+                margin-left 30%
                 margin-top .1rem
                 font-size .2rem
                 color gray

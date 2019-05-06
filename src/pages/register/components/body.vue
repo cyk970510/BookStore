@@ -8,7 +8,7 @@
           <div class="registerID">
             <span class="iconfont IDicon">&#xe60f;</span>
             <span>
-              <input class="IDinput" type="text" placeholder="手机号" v-model="LandID" v-on:input="watchID" />
+              <input class="IDinput" type="text" placeholder="手机号/邮箱" v-model="LandID" v-on:input="watchID" />
             </span>
             <span v-if="isResetId" class="iconfont errorone" @click="clearID">&#xe9a2;</span>
           </div>
@@ -286,7 +286,7 @@ export default {
           .errorone
             position absolute
             margin-top .3rem
-            margin-left .6rem
+            right 5%
             font-size .45rem
             color #cacaca
         .registerPassword
@@ -312,19 +312,19 @@ export default {
           .errortwo
             position absolute
             margin-top .3rem
-            margin-left .05rem
+            right 13%
             font-size .45rem
             color #cacaca
           .lookIcon
             position absolute
             top .3rem
-            margin-left .65rem
+            right 5%
             font-size .4rem
             color #cacaca
           .UnlookIcon
             position absolute
             top .37rem
-            margin-left .65rem
+            right 5%
             font-size .3rem
             color #cacaca
       .registerform
@@ -353,7 +353,7 @@ export default {
           .errorone
             position absolute
             margin-top .3rem
-            margin-left .6rem
+            right 5%
             font-size .45rem
             color #cacaca
         .registerPassword
@@ -379,19 +379,19 @@ export default {
           .errortwo
             position absolute
             margin-top .3rem
-            margin-left .05rem
+            right 9%
             font-size .45rem
             color #cacaca
           .lookIcon
             position absolute
             top .3rem
-            margin-left .65rem
+            right 5%
             font-size .4rem
             color #cacaca
           .UnlookIcon
             position absolute
             top .37rem
-            margin-left .65rem
+            right 5%
             font-size .3rem
             color #cacaca
         .againPassword
@@ -417,19 +417,19 @@ export default {
           .errortwo
             position absolute
             margin-top .3rem
-            margin-left .05rem
+            right 9%
             font-size .45rem
             color #cacaca
           .lookIcon
             position absolute
             top .3rem
-            margin-left .65rem
+            right 5%
             font-size .4rem
             color #cacaca
           .UnlookIcon
             position absolute
             top .37rem
-            margin-left .65rem
+            right 5%
             font-size .3rem
             color #cacaca
       .landBtn
@@ -492,7 +492,7 @@ export default {
     .tips
       width 100%
       overflow hidden
-      margin-top .5rem
+      margin-top 2vh
       .tip
         display block
         margin 0 auto
@@ -500,6 +500,7 @@ export default {
         font-size .24rem
         color gray
         line-height .3rem
+        text-align center
         .careful >>> a
           color red
           text-decoration underline
@@ -518,6 +519,9 @@ export default {
         padding 0 10%
         overflow hidden
         margin-top .8rem
+        display flex
+        align-items center
+        justify-content center
         .one
           float left
           margin-left .5rem
@@ -551,6 +555,9 @@ export default {
       ul
         width 80%
         margin 0 auto
+        display flex
+        align-items center
+        justify-content center
         li
           float left
           margin-left .2rem

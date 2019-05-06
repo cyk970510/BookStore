@@ -53,16 +53,16 @@ export default {
   .bodyleft
     position relative
     float left
-    overflow scroll
-    height 11rem
+    overflow hidden
     width 21.4%
+    height 86%
     .left-ul
       list-style none
     .leftitem
       width 100%
-      padding .3rem 0
+      padding 2vh 0
       background-color #fff
-      font-size .3rem
+      font-size 2vh
       text-align center
     .leftitem >>> a
       color black

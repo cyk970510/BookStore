@@ -67,52 +67,52 @@ export default {
     position relative
     width 100%
     overflow hidden
-    padding-bottom 1.2rem
+    padding-bottom 10vh
+    background #fff
     .bottomregister
-      height .8rem
+      height 5vh
       width 100%
       border .01rem solid #eee
       .land
         display inline-block
-        margin-left .3rem
-        margin-top .3rem
-        font-size .3rem
+        margin-left 2vh
+        margin-top 2vh
+        font-size 2vh
       .register
-        margin-left .3rem
-        font-size .3rem
+        margin-left 5vh
+        font-size 2vh
       .Top
         display inline-block
         float right
-        margin-right .4rem
-        margin-top .3rem
+        margin-right 3vh
+        margin-top 2vh
         .topicon
-          font-size .3rem
+          font-size 2vh
           color #777
         .totop
-          font-size .24rem
+          font-size 3vh
           color #777
     .bottominfo
-      height 2rem
+      height 11vh
       width 100%
-      border .01rem solid #eee
       .info
         width 100%
         text-align center
         .infonva
           display inline-block
           margin 0 auto
-          margin-top .4rem
+          margin-top 3vh
           width 60%
           list-style none
           .infoli
-            font-size .26rem
+            font-size 2vh
             width 33%
             float left
       .message
         display inline-block
         width 100%
-        margin-top .35rem
+        margin-top 2vh
         text-align center
-        line-height .4rem
-        font-size .24rem
+        line-height 2vh
+        font-size 1.2vh
 </style>

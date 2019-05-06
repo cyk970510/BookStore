@@ -163,7 +163,7 @@ export default {
       position fixed
       bottom 18%
       right .3rem
-      width 1rem
+      width 10%
       z-index 800
       .up-img
         width 100%

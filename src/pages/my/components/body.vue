@@ -151,19 +151,19 @@ export default {
     width 100%
     .register
       width 100%
-      height 2.2rem
+      height 14vh
       background url("../../../../static/img-my/user-bg.jpg")
       .RegisterOrLogin
         position relative
-        width 1.5rem
-        padding .3rem .5rem
+        width 9vh
+        padding 2vh 3vh
         text-align center
         border-radius .4rem
         margin 0 auto
-        top .7rem
+        top 5vh
         border .01rem solid white
         color white
-        font-size .3rem
+        font-size 2vh
       .LoginSucc
         position absolute
         top 0
@@ -173,7 +173,7 @@ export default {
         text-align center
         margin-top .8rem
         color white
-        font-size .3rem
+        font-size 2vh
     .meaasge
       width 100%
       height 3.6rem

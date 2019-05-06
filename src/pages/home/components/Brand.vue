@@ -57,7 +57,7 @@ export default {
   .Pingpai-swipper >>> .swiper-pagination-bullet-active
     background: red
   .wrapper
-    height 4rem
+    overflow hidden
     margin-top .1rem
     .Pingpai-header
       .header-img

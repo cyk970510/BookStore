@@ -123,6 +123,9 @@ export default {
   .classify
     margin 0
     padding 0
+    display block
+    height 100vh
+    overflow hidden
     .img-up
       position fixed
       bottom 9%

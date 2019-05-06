@@ -1,0 +1,28 @@
+{
+  "ret": true,
+  "data": {
+     "headerList":[
+      {
+        "id": "1",
+        "imgUrl": "static/img-classify/header-nav/icon_03_in-1536891748 (1).png",
+        "path": "/"
+      },{
+        "id": "2",
+        "imgUrl": "static/img-classify/header-nav/feilei-8-2.png",
+         "path": "/classify"
+      },{
+        "id": "3",
+        "imgUrl": "static/img-classify/header-nav/ic_buy_normal2-1536892644.png",
+         "path": "/buy"
+      },{
+        "id": "4",
+        "imgUrl": "static/img-classify/header-nav/guowuche-8-2.png",
+         "path": "/car"
+      },{
+        "id": "5",
+        "imgUrl": "static/img-classify/header-nav/wodedangdang---4.png",
+         "path": "/my"
+      }
+    ]
+  }
+}
