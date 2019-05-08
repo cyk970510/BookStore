@@ -37,6 +37,10 @@ export default new Router({
     name: 'Register',
     component: resolve => require(['@/pages/register/Register.vue'], resolve)
   }, {
+    path: '/detail',
+    name: 'Detail',
+    component: resolve => require(['@/pages/detail/Detail.vue'], resolve)
+  }, {
     path: '*',
     component: resolve => require(['@/pages/home/Home.vue'], resolve)
   }

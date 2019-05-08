@@ -7,28 +7,28 @@
         </div>
       </router-link>
       <div class="header-input">
-        我的页面
+        书籍详情
       </div>
       <div class="header-right" @click="handleNav" v-show="!isfalse">
-        <span class="iconfont arrow-icon">&#xe751;</span>
+        <span class="iconfont arrow-icon">&#xe609;</span>
       </div>
       <div class="header-right" @click="handleNav" v-show="isfalse">
         <span class="iconfont error-icon">&#xe606;</span>
       </div>
-      <div :class="{headeractive: isfalse}"></div>
     </div>
     <!--<transition name="custom-classes-transition"-->
-                <!--enter-active-class="animated fadeIn"-->
-                <!--leave-active-class="animated fadeOut">-->
-    <div class="footer" :class="{active: isfalse}">
+    <!--enter-active-class="animated fadeIn"-->
+    <!--leave-active-class="animated fadeOut">-->
+    <div class="headerList" v-if="isfalse">
       <div class="middle">
-        <router-link class="footte-1"
-                     v-for="item of headerList"
-                     :key="item.id"
-                     :to="item.path"
-        >
-          <img class="img-1" :src="item.imgUrl" @click="changeFooter(item.id)" />
-        </router-link>
+        <div class="iconWrapper" v-for="item in headerList" :key="item.id" @click="changeFooter(item.id)">
+          <router-link :to="item.path">
+            <div class="iconImg">
+              <img class="img" :src="item.imgUrl"  />
+            </div>
+            <span class="title">{{item.title}}</span>
+          </router-link>
+        </div>
       </div>
     </div>
     <!--</transition>-->
@@ -38,7 +38,7 @@
 <script>
 import {mapMutations} from 'vuex'
 export default {
-  name: 'BuyHeader',
+  name: 'DetailHeader',
   props: {
     headerList: Array
   },
@@ -98,32 +98,38 @@ export default {
         .error-icon
           color red
           font-size 3vh
-      .headeractive
-        position absolute
-        display block
-        content " "
-        right 2vh
-        bottom -.05rem
-        width .4rem
-        height .2rem
-        background: url(../../../../static/img/bottom-icon/connector.png) no-repeat center 0;
-    .footer
-      z-index 1
+    .headerList
+      z-index 900
+      position fixed
+      top 5vh
+      left 0
       width 100%
-      background-color #eee
-      overflow hidden
-      height 0
-      transition height .3s
-      -webkit-transition height .3s
+      height 95vh
+      background rgba(0,0,0,0.5)
       .middle
-        padding .13rem 0
-        .footte-1
-          margin-top 0.1rem
-          font-size 2vh
-          .img-1
-            padding 0 5%
-            width 10%
-            color #4d525d
-    .active
-      height 8vh
+        position absolute
+        width 100%
+        height 25vh
+        top 0
+        left 0
+        background white
+        border none
+        .iconWrapper
+          position relative
+          float left
+          width 20%
+          height 25%
+          padding 2vh 6.66%
+          text-align center
+          .iconImg
+            position relative
+            width 60%
+            height 4.5vh
+            margin 0 auto
+            .img
+              width 70%
+          .title
+            display inline-block
+            margin-top 2.5vh
+            font-size 2vh
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="header border-bottom">
     <div class="header-top">
-      <router-link to="/">
+      <router-link to="/" @click="changeFooter('1')">
         <div class="header-left">
           <div class="iconfont back-icon">&#xe624;</div>
         </div>

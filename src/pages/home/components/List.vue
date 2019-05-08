@@ -2,11 +2,13 @@
   <div class="icons">
     <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) of pages" :key="index">
-        <div class="icon" v-for="item of page" :key="item.id">
-          <div class="icon-img">
-            <img class="icon-img-content" :src="item.imgUrl" />
+        <router-link to="/detail">
+          <div class="icon" v-for="item of page" :key="item.id">
+            <div class="icon-img">
+              <img class="icon-img-content" :src="item.imgUrl" />
+            </div>
           </div>
-        </div>
+        </router-link>
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>

@@ -2,7 +2,7 @@
   <div class="header border-bottom">
     <div class="header-top">
       <router-link to="/">
-        <div class="header-left">
+        <div class="header-left" @click="changeFooter('1')">
           <div class="iconfont back-icon">&#xe624;</div>
         </div>
       </router-link>
